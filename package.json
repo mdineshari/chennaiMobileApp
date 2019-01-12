@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env RISKSENSE_FRONTEND_SRC=../frontend/src nodemon --watch . --watch ../mocks mocksServer.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",

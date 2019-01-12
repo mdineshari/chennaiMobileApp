@@ -12,20 +12,25 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'static/index.html'));
 });
 
-app.use( (req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Header', 'Origin, X-Requested-With, Content-Type, Accept');
-    next();
+app.use(express.static('public'));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header(
+    'Access-Control-Allow-Header',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
+  next();
 });
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true;
-}));
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
 
 server = app.listen(SERVER_PORT, '0.0.0.0', () => {
-    const host = server.address().address;
-    const port = server.address().port;
-  
-    console.log('Example app listening at http://%s:%s', host, port);
+  const host = server.address().address;
+  const port = server.address().port;
+
+  console.log('Example app listening at http://%s:%s', host, port);
 });
-  
