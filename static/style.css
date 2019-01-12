@@ -1,0 +1,40 @@
+body{
+	text-align:center;
+	
+}
+html{
+	height:100%;
+}
+.header-banner{
+	opacity:.2;
+}
+.site-hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #0a5809;
+    padding-top: 65px;
+}
+.vert-center-wrap {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.vert-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+#imei_form {
+        display: inline-block;
+    width: 20%;
+    border: 3px solid #fff;
+    border-radius: 4px;
+    background: none;
+    color: #fff;
+    height: 38px;
+    font-size: 30px;
+    box-shadow: none;
+}
