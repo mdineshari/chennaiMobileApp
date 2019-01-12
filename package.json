@@ -1,0 +1,25 @@
+{
+  "name": "chennaimobileapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env RISKSENSE_FRONTEND_SRC=../frontend/src nodemon --watch . --watch ../mocks mocksServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdineshari/chennaiMobileApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdineshari/chennaiMobileApp/issues"
+  },
+  "homepage": "https://github.com/mdineshari/chennaiMobileApp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9",
+    "save-dev": "^2.0.0"
+  }
+}
