@@ -4,7 +4,7 @@ const express = require('express');
 
 const app = express();
 
-const SERVER_PORT = 8080;
+const SERVER_PORT = process.env.PORT || 8080;
 
 let server = null;
 
