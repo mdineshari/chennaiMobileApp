@@ -1,12 +1,16 @@
 body{
 	text-align:center;
-	
 }
 html{
 	height:100%;
 }
+p{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size:18px;
+}
+
 .header-banner{
-	opacity:.2;
+	background:cover;
 }
 .site-hero-content {
     position: absolute;
@@ -15,7 +19,7 @@ html{
     width: 100%;
     height: 100%;
     text-align: center;
-    color: #0a5809;
+    color: #4f7d4e;
     padding-top: 65px;
 }
 .vert-center-wrap {
@@ -27,6 +31,15 @@ html{
     display: table-cell;
     vertical-align: middle;
 }
+button a{
+    color:inherit;
+	font-family: 'Staatliches', cursive;
+}
+.info{
+    padding-top: 20px;
+	color:#c71334;
+	font-weight:bold;
+}
 #imei_form {
         display: inline-block;
     width: 20%;
@@ -37,4 +50,19 @@ html{
     height: 38px;
     font-size: 30px;
     box-shadow: none;
+}
+
+div.table-responsive td {
+	text-align: left;
+}
+
+div.table-responsive table>tbody>tr>td:nth-child(1) {
+	width: 40%;
+}
+
+h1 {
+    font-family: 'Staatliches', cursive;
+    font-size: 60px;
+    margin-top: 100px;
+    text-align: center;
 }
