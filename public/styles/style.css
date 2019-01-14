@@ -40,6 +40,9 @@ button a{
 	color:#c71334;
 	font-weight:bold;
 }
+.radiotext {
+    margin: 10px 10px 0px 0px;
+}
 #imei_form {
         display: inline-block;
     width: 20%;

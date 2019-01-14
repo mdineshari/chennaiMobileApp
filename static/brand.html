@@ -15,6 +15,19 @@
 	padding-top:50px;
   }
   </style>
+  <script>
+	 var checker = document.getElementById('checkme');
+	 var sendbtn = document.getElementById('sendme');
+	 // when unchecked or checked, run the function
+	 checker.onchange = function(){
+	if(this.checked){
+		sendbtn.disabled = false;
+	} else {
+		sendbtn.disabled = true;
+	}
+
+	}
+  </script>
 </head>
 <body>
 
@@ -74,23 +87,56 @@
 										<td><b>Cost</b></td>
 									</tr>
 									<tr>
-										<td>Display Change</td>
-										<td>INR 2000</td>	
+										<td>
+											<div class="radio">
+												<label><input type="radio" name="optradio" id="checkme">Display Change</label>
+											</div>
+										</td>
+										<td>
+											<div class="radiotext">
+												<label>INR 2000</label>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td>Unlock</td>
-										<td>INR 1500</td>	
+										<td>
+											<div class="radio">
+												<label><input type="radio" name="optradio" id="checkme">Unlock</label>
+											</div>
+										</td>
+										<td>
+											<div class="radiotext">
+												<label>INR 1500</label>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td>Mic Issue</td>
-										<td>INR 1000</td>	
+										<td>
+											<div class="radio">
+												<label><input type="radio" name="optradio" id="checkme">Mic Issue</label>
+											</div>
+										</td>
+										<td>
+											<div class="radiotext">
+												<label>INR 1000</label>
+											</div>
+										</td>
 									</tr>
 									<tr>
-										<td>Charging Problem</td>
-										<td>INR 1500</td>	
+										<td>
+											<div class="radio">
+												<label><input type="radio" name="optradio" id="checkme">Charging Problem</label>
+											</div>
+										</td>
+										<td>
+											<div class="radiotext">
+												<label>INR 1500</label>	
+											</div>
+										</td>
 									</tr>
 								</tbody>
 							</table>
+							<input type="submit" disabled="disabled" id="sendme" value="Next">
 						</div>
 					</div>
 					

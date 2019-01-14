@@ -12,6 +12,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'static/index.html'));
 });
 
+
+app.get('/brand', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'static/brand.html'));
+});
+
 app.use(express.static('public'));
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
