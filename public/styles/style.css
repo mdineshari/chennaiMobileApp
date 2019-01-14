@@ -41,7 +41,7 @@ button a{
 	color:#c71334;
 	font-weight:bold;
 }
-.radiotext {
+div.radiotext label {
     margin: 10px 10px 0px 0px;
 }
 #imei_form {
