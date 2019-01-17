@@ -1,6 +1,7 @@
 body{
 	text-align:center;
 	padding-top:50px;
+	font-family:'Josefin Sans', sans-serif;
 }
 html{
 	height:100%;
@@ -58,8 +59,13 @@ div.radiotext label {
 
 div.table-responsive td {
 	text-align: left;
+	
 }
-
+.nav-tabs li.active a{
+	color:#c768a2;
+	font-size:22px;
+	
+}
 div.table-responsive table>tbody>tr>td:nth-child(1) {
 	width: 40%;
 }
@@ -70,7 +76,21 @@ div.table-responsive table>tbody>tr>td:nth-child(3) {
 	width: 30%;
 	text-align:center;
 }
-
+.table-responsive table .br-none{
+	border-top:0;
+}
+.blue-bg{
+	background:#4bdcc1;
+}
+.blue-bg .table-responsive table th, .blue-bg .table-responsive table td{
+	border-color:#fff;
+}
+.Model_name{
+	    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+    border-bottom: 3px solid #9ca0a0;
+    color: #286090;
+}
 h1 {
     font-family: 'Staatliches', cursive;
     font-size: 60px;
@@ -78,8 +98,8 @@ h1 {
     text-align: center;
 }
 .controller{
-	width:20%;
-	height:20%;
+	width:25%;
+	height:25%;
 }
 /* Navbar color */
 .navbar-default {
