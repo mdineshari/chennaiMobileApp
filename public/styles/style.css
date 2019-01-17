@@ -63,6 +63,13 @@ div.table-responsive td {
 div.table-responsive table>tbody>tr>td:nth-child(1) {
 	width: 40%;
 }
+div.table-responsive table>tbody>tr>td:nth-child(2) {
+	width: 30%;
+}
+div.table-responsive table>tbody>tr>td:nth-child(3) {
+	width: 30%;
+	text-align:center;
+}
 
 h1 {
     font-family: 'Staatliches', cursive;
@@ -70,9 +77,13 @@ h1 {
     margin-top: 100px;
     text-align: center;
 }
+.controller{
+	width:20%;
+	height:20%;
+}
 /* Navbar color */
 .navbar-default {
-    background-color: #F8F8F8;
+    background-color: #194f79;
     border-color: #E7E7E7;
 }
 /* Title */
