@@ -98,9 +98,31 @@ h1 {
     text-align: center;
 }
 .controller{
-	width:25%;
-	height:25%;
+	width: 45%;
+    height: 20%;
 }
+.well{
+	background-color:#fff;
+}
+/* Service Form Style */
+.main-center {
+    margin-top: 30px;
+	text-align:left;
+	
+    margin: 0 auto;
+    padding: 10px 40px;
+    background: #009edf;
+    color: #FFF;
+    text-shadow: none;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+}
+.mx-width{
+	max-width:350px;
+	
+}
+/* Service Form Style End*/
 /* Navbar color */
 .navbar-default {
     background-color: #194f79;
@@ -169,4 +191,20 @@ h1 {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
           color: #333;
     }
+}
+@media (max-width: 767px) {
+    .controller{
+        width: 120%;
+		height: 15%;
+	}
+	.well{
+		margin-bottom:0px;
+	}
+}
+@media (min-width: 767px) {
+    
+.mx-width{
+	padding-left:100px;
+	
+}
 }
