@@ -4,19 +4,19 @@
   <title>Mobile Repair Service</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
   <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/bootstrap.min.css">
-<!-- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Staatliches" rel="stylesheet"> -->  
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>-->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Staatliches" rel="stylesheet"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <style>
 	.form-disabled{
 		display:none;
 	}
   </style>
   <script src="scripts/jquery-3.3.1.min.js"></script>
-  <script src="scripts/bootstrap.min.js"></script>
+  <!-- <script src="scripts/bootstrap.min.js"></script> -->
 </head>
 <body>
 
@@ -99,16 +99,17 @@
 										</div>
 									</div>
 								  <div class="form-group">
+									<label for="For user choise" class="cols-sm-2 control-label">Choose your Engagement type:</label>
 									<div class="row">
 										<div class="col-md-6">
-											<label><input type="radio" name="share"> Share your location</label>
+											<label><input type="radio" name="share" value="share"> Share your location</label>
 										</div>
 										<div class="col-md-6">
-											<label><input type="radio" name="customize"> Customise your location</label>
+											<label><input type="radio" name="share" value="customize"> Customise your location</label>
 										</div>
 									</div>
 								  </div>
-								  <div class="form-disabled">
+								  <div class="form-disabled" id="customizeDetails">
 								  <div class="form-group">
 									<label for="inputAddress">Address</label>
 									<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
@@ -188,6 +189,6 @@
 		</div>
 	</div>
   <script src="scripts/geo.js"></script>
-	
+  <script src="scripts/index.js"></script>
 </body>
 </html>
