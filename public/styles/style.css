@@ -2,6 +2,7 @@ body{
 	text-align:center;
 	padding-top:50px;
 	font-family:'Josefin Sans', sans-serif;
+	
 }
 html{
 	height:100%;
@@ -199,6 +200,23 @@ h1 {
 	}
 	.well{
 		margin-bottom:0px;
+	}
+	#disabled{
+		display:none;
+	}
+	div.table-responsive table>tbody>tr>td:nth-child(1) {
+	width: 50%;
+}
+div.table-responsive table>tbody>tr>td:nth-child(2) {
+	width: 30%;
+}
+div.table-responsive table>tbody>tr>td:nth-child(3) {
+	width: 20%;
+	
+}
+
+	.table-responsive>.table>tbody>tr>td, .table-responsive>.table>tbody>tr>th, .table-responsive>.table>tfoot>tr>td, .table-responsive>.table>tfoot>tr>th, .table-responsive>.table>thead>tr>td, .table-responsive>.table>thead>tr>th{
+		white-space:initial;
 	}
 }
 @media (min-width: 767px) {

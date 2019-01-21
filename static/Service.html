@@ -44,11 +44,11 @@
 		<div class="order-confirmation">
 			<div class="user-choise">
 				<div class="service">
-					<div class="col-xs-12 col-md-3 well">
+					<div class="col-xs-12 col-md-3 well" id="disabled">
 						<div class="row">
 							<img class="img-responsive" src="images/lenovo-k8-note-colors.jpg" alt="mobile images"/>
 						</div>
-						<div class="row">
+						<div class="row"">
 							<h3 class="Model_name">Lenovo K6 Power</h3>
 							<div class="table-responsive">
 								<table class="table table-stripped">
@@ -94,7 +94,7 @@
 										<div class="cols-sm-10">
 											<div class="input-group">
 												<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-												<input type="text" class="form-control" placeholder="Enter your mobile number">
+												<input type="tel" name="phone" id="phone" required="required" maxlength="10" pattern="[0-9]{10}" class="form-control validate" placeholder="Enter your mobile number">
 											</div>
 										</div>
 									</div>
@@ -140,7 +140,7 @@
 							</div>							
 						</div>
 					</div>
-					<div class="col-xs-12 col-md-3 well">
+					<div class="col-xs-12 col-md-3 well" id="disabled">
 						<div class="panel panel-info">
 						<div class="panel-heading">
 							<div class="panel-title">
