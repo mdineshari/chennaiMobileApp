@@ -1,6 +1,6 @@
 body{
 	text-align:center;
-	padding-top:50px;
+	padding-top:60px;
 	font-family:'Josefin Sans', sans-serif;
 	
 }
@@ -12,6 +12,13 @@ p{
 	font-size:18px;
 }
 
+.site-hero {
+    position: relative;
+    padding-bottom: 50%;
+    background: #45d4ba url(../images/banner.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 .header-banner{
 	background:cover;
 }
@@ -22,8 +29,8 @@ p{
     width: 100%;
     height: 100%;
     text-align: center;
-    color: #4f7d4e;
-    padding-top: 65px;
+    color: #FFF;
+    
 }
 .vert-center-wrap {
     display: table;
@@ -40,8 +47,12 @@ button a{
 }
 .info{
     padding-top: 20px;
-	color:#c71334;
+	color:#92c500;
 	font-weight:bold;
+	font-size:120%;
+}
+marquee{
+	text-align:center;
 }
 div.radiotext label {
     margin: 10px 10px 0px 0px;
@@ -124,6 +135,49 @@ h1 {
 	
 }
 /* Service Form Style End*/
+/* Input Form Style start*/
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+/* Input Form Style End*/
 /* Navbar color */
 .navbar-default {
     background-color: #194f79;
@@ -194,12 +248,23 @@ h1 {
     }
 }
 @media (max-width: 767px) {
+		
+	marquee{
+		width:80%;
+	}
+	.site-hero {
+		padding-bottom:150%;
+	}
     .controller{
         width: 120%;
 		height: 15%;
 	}
 	.well{
 		margin-bottom:0px;
+	}
+	#imei_form{
+		width:50%;
+		text-align:center;
 	}
 	#disabled{
 		display:none;
