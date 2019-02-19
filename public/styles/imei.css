@@ -1,0 +1,84 @@
+
+/* github ribbon */
+a[href="http://github.com/madeinstefano/imei-validator"] img{
+  position:absolute;
+  top:0;
+  left:0;
+  border:0;
+}
+body{
+  margin:0px;
+  padding:0px;
+  text-align:center;
+  background:url('lite-noise2.png');
+}
+.h1_align{
+	padding-top:60px;
+}
+
+#result a{
+  text-decoration:underline;
+  cursor:pointer;
+  color:#44bdfb;
+  text-shadow:#44bfff 0px 0px 1px;
+}
+
+#result{
+  display:none;
+  margin:25px 0px 0px 30px;
+  font-size:25px;
+  color:#eee;
+  text-shadow:#fff 0px 0px 1px;
+}
+
+#controls input{
+  font-size:30px;
+  padding:15px 5px 15px 35px;
+  width:500px;
+  border:0px;
+  background:transparent;
+  font-family:courier;
+  color:#eee;
+  text-shadow:#fff 0px 0px 1px;
+  outline:0px;
+}
+#validate{
+  border:1px solid #ddd;
+  position:absolute;
+  top:4px;
+  right:6px;
+  bottom:4px;
+  width:70px;
+  font-size:22px;
+  background:#ccc;
+  box-shadow:0px 0px 10px #000;
+  color:#000;
+  font-weight:bolder;
+  -webkit-border-radius:100px;
+  border-radius:100px;
+  cursor:pointer;
+}
+#validate:hover{
+  border-color:#222;
+  background-color:#aaa;
+}
+
+#imei_bar{
+  height:75px;
+  margin:30px auto 0px;
+  text-align:left;
+  position:relative;
+  width:400px;
+  border:1px solid #ddd;
+  -webkit-border-radius:110px;
+  border-radius:110px;
+  background:#333;
+  -webkit-box-shadow:inset 0px 0px 20px #000;
+  box-shadow:inset 0px 0px 20px #000;
+}
+
+p{
+  text-shadow:1px 1px 2px #eee, 0px 0px 0px #eee;
+  color:#fff;
+  padding-top:10px;
+}
