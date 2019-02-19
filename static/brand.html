@@ -10,19 +10,22 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
   <script>
-	 var checker = document.getElementById('checkme');
-	 var sendbtn = document.getElementById('sendme');
-	 // when unchecked or checked, run the function
-	 checker.onchange = function(){
-	if(this.checked){
-		sendbtn.disabled = false;
-	} else {
-		sendbtn.disabled = true;
-	}
+  $(function() {
+  $(":checkbox").change(function() {
+    var arr = $(":checkbox:checked").map(function() { return $(this).next().html(); }).get();
+    $("#text").html(arr.join(', '));
+  });
+});
 
-	}
+function ToggleBGColour(item) {
+    var td = $(item).parent();      
+    if (td.is('.rowSelected'))      
+        td.removeClass("rowSelected");      
+    else        
+        td.addClass("rowSelected");     
+}
+
   </script>
 </head>
 <body>
@@ -93,7 +96,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="checkme">Battery issue</label>
+												<label><input type="checkbox" name="optcheckbox" id="1"><div id="thing">Battery issue</div></label>
 											</div>
 										</td>
 										<td>
@@ -106,7 +109,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="checkme">Charging Port Issue</label>
+												<label><input type="checkbox" name="optcheckbox" id="2"><div id="thing">Charging Port Issue</div></label>
 											</div>
 										</td>
 										<td>
@@ -119,7 +122,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="checkme">Display Broken</label>
+												<label><input type="checkbox" name="optcheckbox" id="3"><div id="thing">Display Broken</div></label>
 											</div>
 										</td>
 										<td>
@@ -132,7 +135,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="checkme">Front Camera not working</label>
+												<label><input type="checkbox" name="optcheckbox" id="4"><div id="thing">Front Camera not working</div></label>
 											</div>
 										</td>
 										<td>
@@ -145,7 +148,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="checkme">Headphone not working</label>
+												<label><input type="checkbox" name="optcheckbox" id="5"><div id="thing">Headphone not working</div></label>
 											</div>
 										</td>
 										<td>
@@ -158,7 +161,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="checkme">Liquid Damage</label>
+												<label><input type="checkbox" name="optcheckbox" id="6"><div id="thing">Liquid Damage</div></label>
 											</div>
 										</td>
 										<td>
@@ -171,7 +174,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="checkme">Loudspeaker error</label>
+												<label><input type="checkbox" name="optcheckbox" id="7"><div id="thing">Loudspeaker error</div></label>
 											</div>
 										</td>
 										<td>
@@ -184,7 +187,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="checkme">Mike problem</label>
+												<label><input type="checkbox" name="optcheckbox" id="8"><div id="thing">Mike problem</div></label>
 											</div>
 										</td>
 										<td>
@@ -197,7 +200,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="checkme">Mobile network antena issue</label>
+												<label><input type="checkbox" name="optcheckbox" id="9"><div id="thing">Mobile network antena issue</div></label>
 											</div>
 										</td>
 										<td>
@@ -210,7 +213,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="checkme">Power button problem</label>
+												<label><input type="checkbox" name="optcheckbox" id="10"><div id="thing">Power button problem</div></label>
 											</div>
 										</td>
 										<td>
@@ -223,7 +226,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="checkme">Rear Camera Problem</label>
+												<label><input type="checkbox" name="optcheckbox" id="11"><div id="thing">Rear Camera Problem</div></label>
 											</div>
 										</td>
 										<td>
@@ -236,7 +239,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="checkme">Software error</label>
+												<label><input type="checkbox" name="optcheckbox" id="12"><div id="thing">Software error</div></label>
 											</div>
 										</td>
 										<td>
@@ -262,12 +265,21 @@
 					</div>
 				</div>
 				<div class="panel-body text-left">
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-xs-6">
-							<h4 class="product-name"><strong>Software Issue</strong></h4>
+							<h4 class="product-name" id="text"></h4>
 						</div>
 						<div class="col-xs-6">
-							<h6 class="text-right"><strong>INR 1300</strong></h6>
+							<h6 class="text-right"></h6>
+						</div>
+					</div> -->
+					
+					<div class="row">
+						<div class="col-xs-6">
+							<h4 class="product-name"><strong>Battery Issue</strong></h4>
+						</div>
+						<div class="col-xs-6">
+							<h6 class="text-right"><strong>INR 2000</strong></h6>
 						</div>
 					</div>
 					<hr>
@@ -279,7 +291,7 @@
 							<h6 class="text-right"><strong>INR 1200</strong></h6>
 						</div>
 					</div>
-					
+ 					
 				</div>
 				<div class="panel-footer text-left">
 					<div class="row">

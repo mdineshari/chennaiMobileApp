@@ -10,7 +10,21 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+  <script>
+	  var $input = $('input:text'),
+		$register = $('#register');
+
+	$register.attr('disabled', true);
+	$input.keyup(function() {
+		var trigger = false;
+		$input.each(function() {
+			if (!$(this).val()) {
+				trigger = true;
+			}
+		});
+		trigger ? $register.attr('disabled', true) : $register.removeAttr('disabled');
+	});
+  </script>
 </head>
 <body>
 
@@ -53,8 +67,9 @@
     <form action="/" id="imei_form" name="imei_form" method="POST">
         <div class="form-group gradient-border" id="box"><label class="sr-only control-label" for="id_imei">IMEI</label>
 		<input name="imei" title="" placeholder="Enter IMEI" required class="form-control" maxlength="15" type="text" id="id_imei" autofocus></div>
+		<div><input class="btn btn-primary" id="register" type="submit" value="SUBMIT"><a href="brand"></a></div>
 		
-        <button class="btn btn-primary "><a href="brand">CHECK</a></button>
+        
 		
         
           
