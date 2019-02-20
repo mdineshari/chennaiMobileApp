@@ -1,5 +1,3 @@
-$(function(){
-
   function isIMEIValid(imei){
   
     if (!/^[0-9]{15}$/.test(imei)) {return false;}
@@ -125,41 +123,4 @@ $(function(){
     return null;
   }
   
-  function validate(){
-    $('#controls').fadeOut(500,function (){
-    
-      var msg, imei = $('#imei').val(), r;
-            
-      if ( imei !== '' && isIMEIValid(imei) ){
-        r = getReportingBody(parseInt(imei.substring(0,2)));
-        msg = (r !== null) 
-          ? "It's a valid one, the Reporting Body is " + r.name + " from " + r.location + "."
-          : "It's a valid one."
-      }else{      
-        msg = 'Sorry, this is invalid.'
-      }
 
-      $('#result > span').text(msg)
-      $('#result').fadeIn()
-    });          
-  }
-
-  $('#imei').trigger('focus')
-  
-	$('#result > a').bind('click',function (e){
-    $('#result').fadeOut(500, function (){
-      $('#controls').fadeIn(500, function (){
-        $('#imei').trigger('focus')
-      });
-    });
-  });
-  
-  $('#imei').bind('keyup', function (e){
-    if (e.keyCode == 13){
-      validate()
-    }
-  })
-  $('#validate').bind('click',function (){
-    validate()
-  });
-});
