@@ -183,6 +183,9 @@ h1 {
 	padding-left:0px;
 	padding-right:0px;
 }
+#brand_container{
+	padding-top:60px;
+}
 /* Navbar color */
 .navbar-default {
     background-color: #194f79;

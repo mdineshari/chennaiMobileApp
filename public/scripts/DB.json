@@ -1,0 +1,13 @@
+{
+	"imeis": [
+		{
+			"Model":"Lenovo","Purchase_Year":2016,"Country":"US", "imeino":355345080365844
+		},
+		{
+			"Model":"Vivo","Purchase_Year":2018,"Country":"UK", "imeino":356568081858124
+		},
+		{
+			"Model":"iPhone","Purchase_Year":2019,"Country":"US", "imeino":355359081829195
+		}
+	]
+}
