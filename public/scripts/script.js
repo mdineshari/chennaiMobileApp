@@ -51,9 +51,12 @@ function validate(controlsId, textBoxId, resultId){
 			mobileDetail = imeiDetails.filter( imeiData => 
 				imeiData.imeino == imei
 			)[0];
-			console.log(mobileDetail);
+			//console.log(mobileDetail);
 			
-			
+			$('#model_name').append(mobileDetail.Model);
+			$('#device_name').append(mobileDetail.Device_Name);
+			$('#Year').append(mobileDetail.Purchase_Year);
+			$('#counrty').append(mobileDetail.Country);
 			
 			
 			

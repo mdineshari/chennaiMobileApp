@@ -1,13 +1,13 @@
 {
 	"imeis": [
 		{
-			"Model":"Lenovo","Purchase_Year":2016,"Country":"US", "imeino":355345080365844
+			"Model":"Lenovo K6 Power","Device_Name":"Lenovo","Purchase_Year":2016,"Country":"India", "imeino":355345080365844
 		},
 		{
-			"Model":"Vivo","Purchase_Year":2018,"Country":"UK", "imeino":356568081858124
+			"Model":"Vivo V15 Pro","Device_Name":"Vivo","Purchase_Year":2018,"Country":"UK", "imeino":356568081858124
 		},
 		{
-			"Model":"iPhone","Purchase_Year":2019,"Country":"US", "imeino":355359081829195
+			"Model":"iPhone 7+","Device_Name":"iPhone","Purchase_Year":2019,"Country":"US", "imeino":355359081829195
 		}
 	]
 }

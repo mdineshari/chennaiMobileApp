@@ -85,21 +85,21 @@
 					<img class="img-responsive" src="images/lenovo-k8-note-colors.jpg" alt="mobile images"/>
 				</div>
 				<div class="row">
-					<h3 class="Model_name" id="model_name">Lenovo K6 Power</h3>
+					<h3 class="Model_name" id="model_name"></h3>
 					<div class="table-responsive">
 						<table class="table table-stripped">
 							<tbody>
 								<tr>
 									<td>Device Name:</td>
-									<td>Lenovo</td>
+									<td id="device_name"></td>
 								</tr>
 								<tr>
 									<td>Device Model:</td>
-									<td>2016</td>	
+									<td id="Year"></td>	
 								</tr>
 								<tr>
 									<td>Purchase Country:</td>
-									<td>India</td>	
+									<td id="counrty"></td>	
 								</tr>
 								
 								
@@ -125,7 +125,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="1"><div id="thing">Battery issue</div></label>
+												<label><input type="checkbox" onclick="AddtoCart('Battery issue',2000)" id="1"><div id="thing">Battery issue</div></label>
 											</div>
 										</td>
 										<td>
@@ -138,7 +138,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="2"><div id="thing">Charging Port Issue</div></label>
+												<label><input type="checkbox" onclick="AddtoCart('Charging Port Issue',1500)" id="2"><div id="thing">Charging Port Issue</div></label>
 											</div>
 										</td>
 										<td>
@@ -151,7 +151,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="3"><div id="thing">Display Broken</div></label>
+												<label><input type="checkbox" onclick="AddtoCart('Display Broken',1000)" id="3"><div id="thing">Display Broken</div></label>
 											</div>
 										</td>
 										<td>
@@ -164,7 +164,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="4"><div id="thing">Front Camera not working</div></label>
+												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="4"><div id="thing">Front Camera not working</div></label>
 											</div>
 										</td>
 										<td>
@@ -177,7 +177,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="5"><div id="thing">Headphone not working</div></label>
+												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="5"><div id="thing">Headphone not working</div></label>
 											</div>
 										</td>
 										<td>
@@ -190,7 +190,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="6"><div id="thing">Liquid Damage</div></label>
+												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="6"><div id="thing">Liquid Damage</div></label>
 											</div>
 										</td>
 										<td>
@@ -203,7 +203,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="7"><div id="thing">Loudspeaker error</div></label>
+												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="7"><div id="thing">Loudspeaker error</div></label>
 											</div>
 										</td>
 										<td>
@@ -216,7 +216,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="8"><div id="thing">Mike problem</div></label>
+												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="8"><div id="thing">Mike problem</div></label>
 											</div>
 										</td>
 										<td>
@@ -229,7 +229,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="9"><div id="thing">Mobile network antena issue</div></label>
+												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="9"><div id="thing">Mobile network antena issue</div></label>
 											</div>
 										</td>
 										<td>
@@ -242,7 +242,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="10"><div id="thing">Power button problem</div></label>
+												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="10"><div id="thing">Power button problem</div></label>
 											</div>
 										</td>
 										<td>
@@ -255,7 +255,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="11"><div id="thing">Rear Camera Problem</div></label>
+												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="11"><div id="thing">Rear Camera Problem</div></label>
 											</div>
 										</td>
 										<td>
@@ -268,7 +268,7 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" name="optcheckbox" id="12"><div id="thing">Software error</div></label>
+												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="12"><div id="thing">Software error</div></label>
 											</div>
 										</td>
 										<td>
@@ -283,7 +283,7 @@
 							</div>
 			</div>
 			<div class="col-xs-12 col-md-3 well">
-				<div class="panel panel-info">
+ 				<!-- <div class="panel panel-info">
 				<div class="panel-heading">
 					<div class="panel-title">
 						<div class="row">
@@ -294,14 +294,14 @@
 					</div>
 				</div>
 				<div class="panel-body text-left">
-					<!-- <div class="row">
+					 <div class="row">
 						<div class="col-xs-6">
 							<h4 class="product-name" id="text"></h4>
 						</div>
 						<div class="col-xs-6">
 							<h6 class="text-right"></h6>
 						</div>
-					</div> -->
+					</div> 
 					
 					<div class="row">
 						<div class="col-xs-6">
@@ -332,20 +332,35 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<button type="button" class="btn btn-success btn-block">
-								<a href="Service">Book a Service</a>
-							</button>
-							<p>OR</p>
-			<button type="button" class="btn btn-success btn-block">
-								<a href="Service">Book a Technician</a>
-							</button>
+			</div> -->
+ 			<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+									<h3><span class="glyphicon glyphicon-shopping-cart"></span> Summary</h3>
+							</tr>
+						</thead>
+						<tbody id="orderedProductsTblBody">
+						</tbody>
+							<tr>
+								<td class="text-right" id="cart_total"></td>
+							</tr>
+					</table>
+				</div>
+				<button type="button" class="btn btn-success btn-block">
+					<a href="Service">Book a Service</a>
+				</button>
+				<p>OR</p>
+				<button type="button" class="btn btn-success btn-block">
+					<a href="Service">Book a Technician</a>
+				</button>
 			</div>
 		</div>
 	</div>
 	
 	<script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
     <script type="text/javascript" src="scripts/imei.js"></script>
+    <script type="text/javascript" src="scripts/cart.js"></script>
 	<script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>
