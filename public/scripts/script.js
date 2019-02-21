@@ -52,11 +52,17 @@ function validate(controlsId, textBoxId, resultId){
 				imeiData.imeino == imei
 			)[0];
 			//console.log(mobileDetail);
-			
-			$('#model_name').append(mobileDetail.Model);
-			$('#device_name').append(mobileDetail.Device_Name);
-			$('#Year').append(mobileDetail.Purchase_Year);
-			$('#counrty').append(mobileDetail.Country);
+			if(!mobileDetail){
+				msg = 'IMEI details not found in our record.';
+				$('#' + resultId + ' > span').text(msg)
+				$('#' + 'result' + ' > a').text('try again');
+				$('#' + resultId).fadeIn()
+				return;
+			}
+			$('#model_name').text(mobileDetail.Model);
+			$('#device_name').text(mobileDetail.Device_Name);
+			$('#Year').text(mobileDetail.Purchase_Year);
+			$('#counrty').text(mobileDetail.Country);
 			
 			
 			

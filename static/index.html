@@ -13,72 +13,49 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container">
+		<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-		  <a class="navbar-brand" href="#">NazeerMobiles</a>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> NazeerMobiles</a>
+			</div>		
 		</div><!-- /.navbar-collapse -->
-	  
 	</nav>
-  
-	<div class="container-fluid">
-		<div class="site-hero " id="home_container">    
-		   <div class="banner">
+	<div class="container"  id="home_container">
+		<div class="row">
+			<div class="col-md-6">
 				<div class="site-hero-content">
-					<!-- <div class="vert-center-wrap">
-						<div class="vert-center">					
-							<h1><span>Enter your IMEI number</span><br></h1>
-							<p>Dail *#06# from your mobile to know your IMEI</p>
-							<form action="/" id="imei_form" name="imei_form" onsubmit="return valid_credit_card()" method="post">
-								<div class="form-group gradient-border" id="box">
-									<label class="sr-only control-label" for="id_imei">IMEI</label>
-									<input name="imei" title="" placeholder="Enter IMEI" required class="form-control" maxlength="15" type="text" id="id_imei" autofocus></div>
-								<div>
-									<input class="btn btn-primary" id="register" type="submit" value="SUBMIT"><a href="brand"></a>
-								</div>
-							</form>
-							<div class="info">
-								<marquee behaviour="scroll" onmouseover="this.stop();" onmouseout="this.start();" width="35%" direction="up" scrollamount="2">**We are handle mobile services from 2016 model to till.<br/>
-								**Company warranty will not accept here.
-								</marquee> 
-							</div>
-						</div> -->
-							<h1 class="h1_align"><span>Enter your IMEI number</span><br></h1>
-							<p>Dail *#06# from your mobile to know your IMEI</p>
-    
-							<div id="imei_bar">
-							  <div id="controls">
-								<input id="imei" maxlength="15" required/>
-								<button id="validate">ok</button>
-								<div style="clear:both;"></div>
-							  </div>
-							  <div id="result">
-								<span id="message"></span>&nbsp;<a></a>
-							  </div>
-							</div>
-							<p>Just type an IMEI code in the field above and click in "ok" button or type enter.</p>
-						<div class="info">
-								<marquee behaviour="scroll" onmouseover="this.stop();" onmouseout="this.start();" width="35%" direction="up" scrollamount="2">**We are handle mobile services from 2016 model to till.<br/>
-								**Company warranty will not accept here.
-								</marquee> 
+						<h1 class="h1_align"><span>Enter your IMEI number</span><br></h1>
+						<p>Dail *#06# from your mobile to know your IMEI</p>
+
+						<div id="imei_bar">
+						  <div id="controls">
+							<input id="imei" maxlength="15" required/>
+							<button id="validate">ok</button>
+							<div style="clear:both;"></div>
+						  </div>
+						  <div id="result">
+							<span id="message"></span>&nbsp;<a></a>
+						  </div>
 						</div>
+						<p>Just type an IMEI code in the field above and click in "ok" button or type enter.</p>
+						<div class="info">
+							<marquee behaviour="scroll" onmouseover="this.stop();" onmouseout="this.start();" width="35%" direction="up" scrollamount="2">**We are handle mobile services from 2016 model to till.<br/>
+							**Company warranty will not accept here.
+							</marquee> 
+						</div>
+						<p></p>
+						<p></p>
+						<p></p>
+						<p></p>
 					</div>
-				</div>
+			</div>
+			<div class="col-md-6">
+				<img class="img-responsive" src="images/b.jpg" alt="Banner images"/>
 			</div>
 		</div>
-		<div class="container">
+	</div>
+	<div class="container">
 		<div class="row" id="brand_container">
 			<div class="col-xs-12 col-md-3 well">
 				<div class="row">
@@ -100,17 +77,14 @@
 								<tr>
 									<td>Purchase Country:</td>
 									<td id="counrty"></td>	
-								</tr>
-								
-								
-		
+								</tr>					
 							</tbody>
 						</table>
 						
 					</div>
 					
 				</div>
-				</div>
+			</div>
 			<div class="col-xs-12 col-md-6 well">
 				<div class="table-responsive">
 							<table class="table">

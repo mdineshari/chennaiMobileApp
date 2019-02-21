@@ -26,9 +26,9 @@ body{
 #result{
   display:none;
   margin:25px 0px 0px 30px;
-  font-size:25px;
-  color:#eee;
-  text-shadow:#fff 0px 0px 1px;
+  font-size:15px;
+  color:red;
+  text-align:center;
 }
 
 #controls input{

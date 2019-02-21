@@ -11,37 +11,18 @@ p{
 	font-family: 'Josefin Sans', sans-serif;
 	font-size:18px;
 }
-
-.site-hero {
-    position: relative;
-    padding-bottom: 50%;
-    background: #45d4ba url(../images/banner.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
-	top:-10px;
-}
-.header-banner{
-	background:cover;
-}
 .site-hero-content {
     position: absolute;
     top: 0;
-    left: 0;
+    /* left: 0; */
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     text-align: center;
     color: #FFF;
-    
+    background:#f86700;
 }
-.vert-center-wrap {
-    display: table;
-    height: 100%;
-    width: 100%;
-}
-.vert-center {
-    display: table-cell;
-    vertical-align: middle;
-}
+
+
 button a{
     color:inherit;
 	font-family: 'Staatliches', cursive;
@@ -191,8 +172,8 @@ h1 {
 }
 /* Navbar color */
 .navbar-default {
-    background-color: #194f79;
-    border-color: #383780;
+    background-color: #000;
+     border-color: #012421; 
 }
 /* Title */
 .navbar-default .navbar-brand {
