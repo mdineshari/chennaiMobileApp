@@ -32,9 +32,9 @@ body{
 }
 
 #controls input{
-  font-size:30px;
+  font-size:25px;
   padding:15px 5px 15px 35px;
-  width:500px;
+  
   border:0px;
   background:transparent;
   font-family:courier;
@@ -64,11 +64,11 @@ body{
 }
 
 #imei_bar{
-  height:75px;
+  height:55px;
   margin:30px auto 0px;
   text-align:left;
   position:relative;
-  width:400px;
+  width:360px;
   border:1px solid #ddd;
   -webkit-border-radius:110px;
   border-radius:110px;
