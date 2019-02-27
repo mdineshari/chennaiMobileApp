@@ -20,25 +20,92 @@
 			  <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> NazeerMobiles</a>
 			</div>	
 			<div class="navbar navbar-right">
-				<span class="glyphicon glyphicon-shopping-cart my-cart-icon position"><span class="badge badge-notify my-cart-badge">0</span></span>
+				<span id="someelem" class="glyphicon glyphicon-shopping-cart my-cart-icon position"><span class="badge badge-notify my-cart-badge">0</span>
+				<div id='tooltip' class='my-tooltip'>
+				<div class="modal fade in" id="my-cart-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block;">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+						<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">
+						<span class="glyphicon glyphicon-shopping-cart">
+						</span> My Cart</h4>
+						</div>
+						<div class="modal-body">
+						<table class="table table-hover table-responsive" id="my-cart-table">
+							<tbody>
+								<tr title="summary 1" data-id="1" data-price="10">
+								
+								<td>product 1</td>
+								
+								
+								<td title="Total" class="text-right my-product-total">$10.00</td>
+								
+								</tr>
+								<tr title="summary 2" data-id="2" data-price="20">
+								
+								<td>product 2</td>
+								
+								
+								<td title="Total" class="text-right my-product-total">$40.00</td>
+								</tr>
+								<tr>
+								<td>
+								<strong>Total</strong>
+								</td>
+								<td class="text-right">
+								<strong id="my-cart-grand-total">$80.00</strong>
+								</td>
+								</tr>
+								<tr style="color: red">
+								<td>
+								<strong>Total (including discount)</strong>
+								</td>
+								<td class="text-right">
+								<strong id="my-cart-discount-price">$40.00</strong>
+								</td>
+								
+								</tr>
+							</tbody>
+						</table>
+						</div>
+						<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+						
+						</div>
+						</div>
+						</div>
+						</div>
+						<div class="modal-backdrop fade in"></div>
+				</div>
+				</span>
 			</div>
-		</div><!-- /.navbar-collapse -->
+		</div>
+<!-- /.navbar-collapse -->
 	</nav>
 	<div class="container"  id="home_container">
 		<div class="row" id="my-row">
 			<div class="col-md-6 my-panel">
 				<div class="site-hero-content">
-						<h1 class="h1_align"><span>Enter your IMEI number</span><br></h1>
+						<h1 class="h1_align">
+<span>Enter your IMEI number</span>
+<br>
+</h1>
 						<p>Dail *#06# from your mobile to know your IMEI</p>
 
 						<div id="imei_bar">
 						  <div id="controls">
 							<input id="imei" maxlength="15" required/>
 							<button id="validate">ok</button>
-							<div style="clear:both;"></div>
+							<div style="clear:both;">
+</div>
 						  </div>
 						  <div id="result">
-							<span id="message"></span>&nbsp;<a></a>
+							<span id="message">
+</span>&nbsp;<a>
+</a>
 						  </div>
 						</div>
 						<p>Just type an IMEI code in the field above and click in "ok" button or type enter.</p>
@@ -57,27 +124,35 @@
 	</div>
 	<div class="container">
 		<div class="row" id="brand_container">
-			<div class="col-md-1"></div>
+			<div class="col-md-1">
+</div>
 			<div class="col-xs-12 col-md-3 well">
 				<div class="row">
 					<img class="img-responsive" src="images/lenovo-k8-note-colors.jpg" alt="mobile images"/>
 				</div>
 				<div class="row">
-					<h3 class="Model_name" id="model_name"></h3>
+					<h3 class="Model_name" id="model_name">
+</h3>
 					<div class="table-responsive">
 						<table class="table table-stripped">
 							<tbody>
 								<tr>
-									<td>Device Name:</td>
-									<td id="device_name"></td>
+									<td>
+<strong>Device Name</strong>:</td>
+									<td id="device_name">
+</td>
 								</tr>
 								<tr>
-									<td>Device Model:</td>
-									<td id="Year"></td>	
+									<td>
+<strong>Device Model</strong>:</td>
+									<td id="Year">
+</td>	
 								</tr>
 								<tr>
-									<td>Purchase Country:</td>
-									<td id="counrty"></td>	
+									<td>
+<strong>Purchase Country</strong>:</td>
+									<td id="counrty">
+</td>	
 								</tr>					
 							</tbody>
 						</table>
@@ -100,7 +175,10 @@
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" onclick="AddtoCart('Battery issue',2000)" id="1"><div id="thing">Battery issue</div></label>
+												<label>
+<input type="checkbox" onclick="AddtoCart('Battery issue',2000)" id="1">
+<div id="thing">Battery issue</div>
+</label>
 											</div>
 										</td>
 										<td>
@@ -108,12 +186,17 @@
 												<label>INR 2000</label>
 											</div>
 										</td>
-										<td><img class="controller img-circle" src="images/Battery issue.png"/></td>
+										<td>
+<img class="controller img-circle" src="images/Battery issue.png"/>
+</td>
 									</tr>
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" onclick="AddtoCart('Charging Port Issue',1500)" id="2"><div id="thing">Charging Port Issue</div></label>
+												<label>
+<input type="checkbox" onclick="AddtoCart('Charging Port Issue',1500)" id="2">
+<div id="thing">Charging Port Issue</div>
+</label>
 											</div>
 										</td>
 										<td>
@@ -121,12 +204,17 @@
 												<label>INR 1500</label>
 											</div>
 										</td>
-										<td><img class="controller img-circle" src="images/Charging_port_issue.png"/></td>
+										<td>
+<img class="controller img-circle" src="images/Charging_port_issue.png"/>
+</td>
 									</tr>
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" onclick="AddtoCart('Display Broken',1000)" id="3"><div id="thing">Display Broken</div></label>
+												<label>
+<input type="checkbox" onclick="AddtoCart('Display Broken',1000)" id="3">
+<div id="thing">Display Broken</div>
+</label>
 											</div>
 										</td>
 										<td>
@@ -134,12 +222,17 @@
 												<label>INR 1000</label>
 											</div>
 										</td>
-										<td><img class="controller img-circle" src="images/Display Broken.png"/></td>
+										<td>
+<img class="controller img-circle" src="images/Display Broken.png"/>
+</td>
 									</tr>
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="4"><div id="thing">Front Camera not working</div></label>
+												<label>
+<input type="checkbox" onclick="AddtoCart('Table',1500)" id="4">
+<div id="thing">Front Camera not working</div>
+</label>
 											</div>
 										</td>
 										<td>
@@ -147,12 +240,17 @@
 												<label>INR 1500</label>	
 											</div>
 										</td>
-										<td><img class="controller img-circle" src="images/Front Camera not working.png"/></td>
+										<td>
+<img class="controller img-circle" src="images/Front Camera not working.png"/>
+</td>
 									</tr>
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="5"><div id="thing">Headphone not working</div></label>
+												<label>
+<input type="checkbox" onclick="AddtoCart('Table',1500)" id="5">
+<div id="thing">Headphone not working</div>
+</label>
 											</div>
 										</td>
 										<td>
@@ -160,12 +258,17 @@
 												<label>INR 1500</label>	
 											</div>
 										</td>
-										<td><img class="controller img-circle" src="images/Headphone not woring.png"/></td>
+										<td>
+<img class="controller img-circle" src="images/Headphone not woring.png"/>
+</td>
 									</tr>
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="6"><div id="thing">Liquid Damage</div></label>
+												<label>
+<input type="checkbox" onclick="AddtoCart('Table',1500)" id="6">
+<div id="thing">Liquid Damage</div>
+</label>
 											</div>
 										</td>
 										<td>
@@ -173,12 +276,17 @@
 												<label>INR 1500</label>	
 											</div>
 										</td>
-										<td><img class="controller img-circle" src="images/Liquid Damage.png"/></td>
+										<td>
+<img class="controller img-circle" src="images/Liquid Damage.png"/>
+</td>
 									</tr>
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="7"><div id="thing">Loudspeaker error</div></label>
+												<label>
+<input type="checkbox" onclick="AddtoCart('Table',1500)" id="7">
+<div id="thing">Loudspeaker error</div>
+</label>
 											</div>
 										</td>
 										<td>
@@ -186,12 +294,17 @@
 												<label>INR 2000</label>
 											</div>
 										</td>
-										<td><img class="controller img-circle" src="images/Loudspeaker error.png"/></td>
+										<td>
+<img class="controller img-circle" src="images/Loudspeaker error.png"/>
+</td>
 									</tr>
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="8"><div id="thing">Mike problem</div></label>
+												<label>
+<input type="checkbox" onclick="AddtoCart('Table',1500)" id="8">
+<div id="thing">Mike problem</div>
+</label>
 											</div>
 										</td>
 										<td>
@@ -199,12 +312,17 @@
 												<label>INR 1500</label>
 											</div>
 										</td>
-										<td><img class="controller img-circle" src="images/Mike problem.png"/></td>
+										<td>
+<img class="controller img-circle" src="images/Mike problem.png"/>
+</td>
 									</tr>
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="9"><div id="thing">Mobile network antena issue</div></label>
+												<label>
+<input type="checkbox" onclick="AddtoCart('Table',1500)" id="9">
+<div id="thing">Mobile network antena issue</div>
+</label>
 											</div>
 										</td>
 										<td>
@@ -212,12 +330,17 @@
 												<label>INR 1000</label>
 											</div>
 										</td>
-										<td><img class="controller img-circle" src="images/Mobile network antena issue.png"/></td>
+										<td>
+<img class="controller img-circle" src="images/Mobile network antena issue.png"/>
+</td>
 									</tr>
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="10"><div id="thing">Power button problem</div></label>
+												<label>
+<input type="checkbox" onclick="AddtoCart('Table',1500)" id="10">
+<div id="thing">Power button problem</div>
+</label>
 											</div>
 										</td>
 										<td>
@@ -225,12 +348,17 @@
 												<label>INR 1500</label>	
 											</div>
 										</td>
-										<td><img class="controller img-circle" src="images/Power button problem.png"/></td>
+										<td>
+<img class="controller img-circle" src="images/Power button problem.png"/>
+</td>
 									</tr>
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="11"><div id="thing">Rear Camera Problem</div></label>
+												<label>
+<input type="checkbox" onclick="AddtoCart('Table',1500)" id="11">
+<div id="thing">Rear Camera Problem</div>
+</label>
 											</div>
 										</td>
 										<td>
@@ -238,12 +366,17 @@
 												<label>INR 1500</label>	
 											</div>
 										</td>
-										<td><img class="controller img-circle" src="images/Rear Camera Problem.png"/></td>
+										<td>
+<img class="controller img-circle" src="images/Rear Camera Problem.png"/>
+</td>
 									</tr>
 									<tr>
 										<td>
 											<div class="checkbox">
-												<label><input type="checkbox" onclick="AddtoCart('Table',1500)" id="12"><div id="thing">Software error</div></label>
+												<label>
+<input type="checkbox" onclick="AddtoCart('Table',1500)" id="12">
+<div id="thing">Software error</div>
+</label>
 											</div>
 										</td>
 										<td>
@@ -251,20 +384,25 @@
 												<label>INR 1500</label>	
 											</div>
 										</td>
-										<td><img class="controller img-circle" src="images/Software error.png"/></td>
+										<td>
+<img class="controller img-circle" src="images/Software error.png"/>
+</td>
 									</tr>
 								</tbody>
 							</table>
 							</div>
 			</div>
-			<div class="col-md-1"></div>
+			<div class="col-md-1">
+</div>
 			<!--<div class="col-xs-12 col-md-3 well">
  				 <div class="panel panel-info">
 				<div class="panel-heading">
 					<div class="panel-title">
 						<div class="row">
 
-								<h3><span class="glyphicon glyphicon-shopping-cart"></span> Summary</h3>
+								<h3>
+<span class="glyphicon glyphicon-shopping-cart">
+</span> Summary</h3>
 							
 						</div>
 					</div>
@@ -272,28 +410,38 @@
 				<div class="panel-body text-left">
 					 <div class="row">
 						<div class="col-xs-6">
-							<h4 class="product-name" id="text"></h4>
+							<h4 class="product-name" id="text">
+</h4>
 						</div>
 						<div class="col-xs-6">
-							<h6 class="text-right"></h6>
+							<h6 class="text-right">
+</h6>
 						</div>
 					</div> 
 					
 					<div class="row">
 						<div class="col-xs-6">
-							<h4 class="product-name"><strong>Battery Issue</strong></h4>
+							<h4 class="product-name">
+<strong>Battery Issue</strong>
+</h4>
 						</div>
 						<div class="col-xs-6">
-							<h6 class="text-right"><strong>INR 2000</strong></h6>
+							<h6 class="text-right">
+<strong>INR 2000</strong>
+</h6>
 						</div>
 					</div>
 					<hr>
 					<div class="row">
 						<div class="col-xs-6">
-							<h4 class="product-name"><strong>Display Broken</strong></h4>
+							<h4 class="product-name">
+<strong>Display Broken</strong>
+</h4>
 						</div>
 						<div class="col-xs-6">
-							<h6 class="text-right"><strong>INR 1200</strong></h6>
+							<h6 class="text-right">
+<strong>INR 1200</strong>
+</h6>
 						</div>
 					</div>
  					
@@ -304,7 +452,9 @@
 							<h4>Total </h4>
 						</div>
 						<div class="col-xs-6">
-							<h6 class="text-right"><strong>INR 2500</strong></h6>
+							<h6 class="text-right">
+<strong>INR 2500</strong>
+</h6>
 						</div>
 					</div>
 				</div>
@@ -313,13 +463,16 @@
 					<table class="table">
 						<thead>
 							<tr>
-									<h3><span class="glyphicon glyphicon-shopping-cart"></span> Summary</h3>
+									<h3>
+<span class="glyphicon glyphicon-shopping-cart">
+</span> Summary</h3>
 							</tr>
 						</thead>
 						<tbody id="orderedProductsTblBody">
 						</tbody>
 							<tr>
-								<td class="text-right" id="cart_total"></td>
+								<td class="text-right" id="cart_total">
+</td>
 							</tr>
 					</table>
 				</div>
@@ -334,9 +487,33 @@
 		</div>-->
 	</div>
 	
-	<script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
-    <script type="text/javascript" src="scripts/imei.js"></script>
-    <script type="text/javascript" src="scripts/cart.js"></script>
-	<script type="text/javascript" src="scripts/script.js"></script>
+	<script type="text/javascript" src="scripts/jquery-1.6.2.min.js">
+</script>
+    <script type="text/javascript" src="scripts/imei.js">
+</script>
+    <script type="text/javascript" src="scripts/cart.js">
+</script>
+	<script type="text/javascript" src="scripts/script.js">
+</script>
+	<script>
+	/*var tooltipTimeout;
+
+	$("#someelem").hover(function()
+						{tooltipTimeout = setTimeout(showTooltip, 2000);}, 
+						hideTooltip);
+
+	function showTooltip()
+		{
+		var tooltip = $("<div id='tooltip' class='my-tooltip'>I'm the tooltip!</div>");
+		tooltip.appendTo($("#someelem"));
+		}
+
+	function hideTooltip()
+		{
+		clearTimeout(tooltipTimeout);
+		$("#tooltip").fadeOut().remove();
+		}
+*/
+	</script>
 </body>
 </html>

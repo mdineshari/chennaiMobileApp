@@ -11,6 +11,9 @@ p{
 	font-family: 'Josefin Sans', sans-serif;
 	font-size:18px;
 }
+.table-responsive .tabel{
+	margin-bottom:0px!important;
+}
 .position{
 	padding-top: 10px;
     color: #ffffff;
@@ -23,10 +26,13 @@ p{
     background:#f86700;
 }
 .badge-notify {
-    background: red;
+    background-color:#fc8019;
     position: relative;
     top: -20px;
     right: 10px;
+}
+.navbar-header.header {
+    margin-top: 10px;
 }
 
 button a{
@@ -182,6 +188,32 @@ h1 {
 	padding-top:80px;
 	/* background-color:#f86700; */
 }
+/* Tooltip Styling Starts*/
+#someelem
+    {
+    cursor: pointer;
+    }
+.my-tooltip p{
+	line-height:16px;
+	color:#000;
+}
+.my-tooltip p strong{
+	font-size:18px;
+	border-bottom: 1px solid #000;
+	margin-bottom:10px; 
+}
+.my-tooltip {
+  visibility: visible;
+  
+}
+.modal-body{
+	color:black;
+}
+#someelem:hover .my-tooltip {
+  visibility: visible;
+}
+/* Tooltip Styling End*/
+/* Resposive Coding Starts */
 @media (max-width: 767px) {
 		
 	marquee{
