@@ -8,9 +8,9 @@
   <link type="text/css" rel="stylesheet" href="styles/style.css">
   <link type="text/css" rel="stylesheet" href="styles/imei.css" />
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Staatliches" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -20,9 +20,14 @@
 			  <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> NazeerMobiles</a>
 			</div>	
 			<div class="navbar navbar-right">
-				<span id="someelem" class="glyphicon glyphicon-shopping-cart my-cart-icon position"><span class="badge badge-notify my-cart-badge">0</span>
-				<div id='tooltip' class='my-tooltip'>
-				<div class="modal fade in" id="my-cart-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: block;">
+				<span id="someelem"  data-toggle="modal" data-target="#my-cart-modal" class="glyphicon glyphicon-shopping-cart my-cart-icon position"><span class="badge badge-notify my-cart-badge">0</span>
+				</span>
+			</div>
+		</div>
+<!-- /.navbar-collapse -->
+	</nav>
+			<div id='tooltip' class='my-tooltip'>
+				<div class="modal fade" id="my-cart-modal" role="dialog">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 						<div class="modal-header">
@@ -78,13 +83,9 @@
 						</div>
 						</div>
 						</div>
-						<div class="modal-backdrop fade in"></div>
+						
 				</div>
-				</span>
-			</div>
-		</div>
-<!-- /.navbar-collapse -->
-	</nav>
+
 	<div class="container"  id="home_container">
 		<div class="row" id="my-row">
 			<div class="col-md-6 my-panel">
