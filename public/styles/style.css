@@ -18,6 +18,8 @@ p{
 	padding-top: 10px;
     color: #ffffff;
     font-size: 30px;
+	float:right!important;
+	margin-right:2px;
 }
 .site-hero-content {
     height: 678px;
@@ -258,7 +260,9 @@ div.table-responsive table>tbody>tr>td:nth-child(3) {
 	}
 }
 @media (min-width: 767px) {
-    
+.navbar-header {
+    float: none;
+}
 .mx-width{
 	padding-left:100px;
 	
@@ -267,5 +271,10 @@ div.table-responsive table>tbody>tr>td:nth-child(3) {
 @media only screen and (max-width: 992px) {
 .display{
 	display:none;
+}
+} 
+@media (min-width: 481px) and (max-width: 767px) {
+#imei_bar{
+	width:90%;
 }
 } 
