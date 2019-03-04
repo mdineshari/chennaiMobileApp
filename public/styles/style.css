@@ -11,6 +11,9 @@ p{
 	font-family: 'Josefin Sans', sans-serif;
 	font-size:18px;
 }
+#home_container{
+	background-color:#f86700;
+}
 .table-responsive .tabel{
 	margin-bottom:0px!important;
 }
@@ -25,7 +28,7 @@ p{
     height: 678px;
     text-align: center;
     color: #FFF;
-    background:#f86700;
+    
 }
 .badge-notify {
     background-color:#fc8019;
@@ -175,10 +178,6 @@ h1 {
 }
 .navbar-inverse .navbar-brand{
 	color:#FFF;
-}
-.my-panel{
-	
-	padding:0px;
 }
 
 /* Input Form Style End*/
