@@ -24,7 +24,7 @@ function displayShoppingCart() {
   }
 
   //iterate over array of objects
-  for (var product in shoppingCart) {
+  shoppingCart.map(product => {
     //add new row
     var row = orderedProductsTblBody.insertRow();
     //create three cells for product properties
@@ -34,35 +34,39 @@ function displayShoppingCart() {
     cellPrice.align = 'right';
     //fill cells with values from current product object of our array
 
-    cellDescription.innerHTML = shoppingCart[product].description;
-    cellPrice.innerHTML = shoppingCart[product].price;
-    cart_total_price += parseInt(shoppingCart[product].price);
-  }
+    cellDescription.innerHTML = product.description;
+    cellPrice.innerHTML = product.price;
+    cart_total_price += parseInt(product.price);
+  });
+
+  //fill the count of checked problems in badge of the cart
   $('#someelem span.badge').text(shoppingCart.length);
   //fill total cost of our shopping cart
-  document.getElementById('cart_total').innerHTML = cart_total_price;
+  $('#cart_total').text(cart_total_price);
 }
 
 $('#problem_details input[type="checkbox"').map(function(index, element) {
   $(element).change(function() {
     if ($(this).is(':checked')) {
       //Below we create JavaScript Object that will hold three properties you have mentioned:    Name,Description and Price
-      var singleProduct = {};
-      //Fill the product object with data
+      var description = $(this).attr('data-problem');
+      var price = $(this).attr('data-cost');
+      var id = $(this).attr('id');
 
-      singleProduct.description = $(this).attr('data-problem');
-      singleProduct.price = $(this).attr('data-cost');
-      singleProduct.id = $(this).attr('id');
+      var singleProduct = {
+        description,
+        price,
+        id,
+      };
+
       //Add newly created product to our shopping cart
       shoppingCart.push(singleProduct);
-      //call display function to show on screen
-      displayShoppingCart();
     } else {
       shoppingCart = shoppingCart.filter(
         cart => cart.id !== $(this).attr('id')
       );
-      //call display function to show on screen
-      displayShoppingCart();
     }
+    //call display function to show on screen
+    displayShoppingCart();
   });
 });
