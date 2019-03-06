@@ -22,7 +22,7 @@ p{
     color: #ffffff;
     font-size: 30px;
 	float:right!important;
-	margin-right:2px;
+	margin-right:12px;
 }
 .site-hero-content {
     height: 678px;
@@ -194,17 +194,15 @@ h1 {
     {
     cursor: pointer;
     }
-.my-tooltip p{
-	line-height:16px;
-	color:#000;
-}
+
 .my-tooltip p strong{
 	font-size:18px;
 	border-bottom: 1px solid #000;
 	margin-bottom:10px; 
 }
 .modal-content{
-	
+	width:80%;
+	left:10%;
 	text-align:left;
 	color:#000;
 	font-family:sans-serif;
@@ -272,8 +270,15 @@ div.table-responsive table>tbody>tr>td:nth-child(3) {
 	display:none;
 }
 } 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 480px) {
 #imei_bar{
-	width:90%;
+	width:90%!important;
+}
+#validate{
+	width:50px!important;
+}
+#controls input{
+	font-size:22px!important;
 }
 } 
+
