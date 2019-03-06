@@ -1,500 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Mobile Repair Service</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link type="text/css" rel="stylesheet" href="styles/style.css">
-  <link type="text/css" rel="stylesheet" href="styles/imei.css" />
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Staatliches" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-		<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header header">
-			  <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span> NazeerMobiles</a>				
-				
-			<ul class="nav navbar-nav navbar-right position">
-				<li><span id="someelem"  data-toggle="modal" data-target="#my-cart-modal" class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge">0</span>
-				</span></li>
-			</ul>
-			</div>
-		</div>
-<!-- /.navbar-collapse -->
-	</nav>
-			<div id='tooltip' class='my-tooltip'>
-				<div class="modal fade" id="my-cart-modal" role="dialog">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-						<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-						</button>
-						<h4 class="modal-title" id="myModalLabel">
-						<span class="glyphicon glyphicon-shopping-cart">
-						</span> My Cart</h4>
-						</div>
-						<div class="modal-body">
-						<div class="empty_msg" id="cart-msg">
-							<h2>
-								Cart is Empty
-							</h2>
-							<p class="text-info">
-								Select your problem details and your order details will be shown.
-							</p>
-						</div>
-						<table class="table table-hover table-responsive" id="my-cart-table">
-							<tbody id="orderedProductsTblBody">
-							
-							</tbody>
-							<tr>
-								<td class="text-right" id="cart_total">
-								</td>
-							</tr>
-								
-						</table>
-						
-						</div>
-						<div class="modal-footer">
-						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-						
-						</div>
-						</div>
-						</div>
-						</div>
-						
-				</div>
+  <head>
+    <title>Mobile Repair Service</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link type="text/css" rel="stylesheet" href="styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="styles/imei.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Staatliches"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header header">
+          <a class="navbar-brand" href="/"
+            ><span class="glyphicon glyphicon-home"></span> NazeerMobiles</a
+          >
 
-	<div class="container"  id="home_container">
-		<div class="row" id="my-row">
-			<div class="col-md-6 my-panel">
+          <ul class="nav navbar-nav navbar-right position">
+            <li>
+              <span
+                id="someelem"
+                data-toggle="modal"
+                data-target="#my-cart-modal"
+                class="glyphicon glyphicon-shopping-cart my-cart-icon"
+                ><span class="badge badge-notify my-cart-badge">0</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div id="tooltip" class="my-tooltip">
+      <div class="modal fade" id="my-cart-modal" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                <span class="glyphicon glyphicon-shopping-cart"> </span> My Cart
+              </h4>
+            </div>
+            <div class="modal-body">
+              <div class="empty_msg" id="cart-msg">
+                <h2>
+                  Cart is Empty
+                </h2>
+                <p class="text-info">
+                  Select your problem details and your order details will be
+                  shown.
+                </p>
+              </div>
+              <table
+                class="table table-hover table-responsive"
+                id="my-cart-table"
+              >
+                <tbody id="orderedProductsTblBody"></tbody>
+                <tr>
+                  <td class="text-right" id="cart_total"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-						<h1 class="h1_align">
-<span>Enter your IMEI number</span>
-<br>
-</h1>
-						<p>Dail *#06# from your mobile to know your IMEI</p>
+    <div class="container" id="home_container">
+      <div class="row" id="my-row">
+        <div class="col-md-6 my-panel">
+          <h1 class="h1_align">
+            <span>Enter your IMEI number</span>
+            <br />
+          </h1>
+          <p>Dail *#06# from your mobile to know your IMEI</p>
 
-						<div id="imei_bar">
-						  <div id="controls">
-							<input id="imei" maxlength="15" required/>
-							<button id="validate">ok</button>
-							<div style="clear:both;">
-</div>
-						  </div>
-						  <div id="result">
-							<span id="message">
-</span>&nbsp;<a>
-</a>
-						  </div>
-						</div>
-						<p>Just type an IMEI code in the field above and click in "ok" button or type enter.</p>
-						<div class="info">
-							<marquee behaviour="scroll" onmouseover="this.stop();" onmouseout="this.start();" width="70%" direction="up" scrollamount="2">**We are handle mobile services from <br/>2016 model to till.<br/>
-							**Company warranty will not accept here.
-							</marquee> 
-						</div>
-						
-					
-			</div>
-			<div class="col-md-6 my-panel display">
-				<img class="img-responsive" src="images/banner.jpg" alt="Banner images"/>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row" id="brand_container">
-			<div class="col-md-1">
-</div>
-			<div class="col-xs-12 col-md-3 well">
-				<div class="row">
-					<img class="img-responsive" src="images/lenovo-k8-note-colors.jpg" alt="mobile images"/>
-				</div>
-				<div class="row">
-					<h3 class="Model_name" id="model_name">
-</h3>
-					<div class="table-responsive">
-						<table class="table table-stripped">
-							<tbody>
-								<tr>
-									<td>
-<strong>Device Name</strong>:</td>
-									<td id="device_name">
-</td>
-								</tr>
-								<tr>
-									<td>
-<strong>Device Model</strong>:</td>
-									<td id="Year">
-</td>	
-								</tr>
-								<tr>
-									<td>
-<strong>Purchase Country</strong>:</td>
-									<td id="counrty">
-</td>	
-								</tr>					
-							</tbody>
-						</table>
-						
-					</div>
-					</div>
-					
-			</div>
-			<div class="col-xs-12 col-md-7 well">
-				<div  id="problem_details">
-				<div class="table-responsive">
-							<table class="table">
-								<tbody>
-									<thead>									
-									<tr>
-										<th class="br-none">Problem Details:</th>
-										<th class="br-none">Cost</th>
-										<th class="br-none">&nbsp;</th>
-									</tr>
-									</thead>
-									<tr>
-										<td>
-											<div class="checkbox">
-												<label>
-<input type="checkbox" onclick="AddtoCart('Battery issue',2000)" data-toggle="toggle">
-<div id="thing">Battery issue</div>
-</label>
-											</div>
-										</td>
-										<td>
-											<div class="radiotext">
-												<label>INR 2000</label>
-											</div>
-										</td>
-										<td>
-<img class="controller img-circle" src="images/Battery issue.png"/>
-</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="checkbox">
-												<label>
-<input type="checkbox" onclick="AddtoCart('Charging Port Issue',1500)" id="2">
-<div id="thing">Charging Port Issue</div>
-</label>
-											</div>
-										</td>
-										<td>
-											<div class="radiotext">
-												<label>INR 1500</label>
-											</div>
-										</td>
-										<td>
-<img class="controller img-circle" src="images/Charging_port_issue.png"/>
-</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="checkbox">
-												<label>
-<input type="checkbox" onclick="AddtoCart('Display Broken',1000)" id="3">
-<div id="thing">Display Broken</div>
-</label>
-											</div>
-										</td>
-										<td>
-											<div class="radiotext">
-												<label>INR 1000</label>
-											</div>
-										</td>
-										<td>
-<img class="controller img-circle" src="images/Display Broken.png"/>
-</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="checkbox">
-												<label>
-<input type="checkbox" onclick="AddtoCart('Table',1500)" id="4">
-<div id="thing">Front Camera not working</div>
-</label>
-											</div>
-										</td>
-										<td>
-											<div class="radiotext">
-												<label>INR 1500</label>	
-											</div>
-										</td>
-										<td>
-<img class="controller img-circle" src="images/Front Camera not working.png"/>
-</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="checkbox">
-												<label>
-<input type="checkbox" onclick="AddtoCart('Table',1500)" id="5">
-<div id="thing">Headphone not working</div>
-</label>
-											</div>
-										</td>
-										<td>
-											<div class="radiotext">
-												<label>INR 1500</label>	
-											</div>
-										</td>
-										<td>
-<img class="controller img-circle" src="images/Headphone not woring.png"/>
-</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="checkbox">
-												<label>
-<input type="checkbox" onclick="AddtoCart('Table',1500)" id="6">
-<div id="thing">Liquid Damage</div>
-</label>
-											</div>
-										</td>
-										<td>
-											<div class="radiotext">
-												<label>INR 1500</label>	
-											</div>
-										</td>
-										<td>
-<img class="controller img-circle" src="images/Liquid Damage.png"/>
-</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="checkbox">
-												<label>
-<input type="checkbox" onclick="AddtoCart('Table',1500)" id="7">
-<div id="thing">Loudspeaker error</div>
-</label>
-											</div>
-										</td>
-										<td>
-											<div class="radiotext">
-												<label>INR 2000</label>
-											</div>
-										</td>
-										<td>
-<img class="controller img-circle" src="images/Loudspeaker error.png"/>
-</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="checkbox">
-												<label>
-<input type="checkbox" onclick="AddtoCart('Table',1500)" id="8">
-<div id="thing">Mike problem</div>
-</label>
-											</div>
-										</td>
-										<td>
-											<div class="radiotext">
-												<label>INR 1500</label>
-											</div>
-										</td>
-										<td>
-<img class="controller img-circle" src="images/Mike problem.png"/>
-</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="checkbox">
-												<label>
-<input type="checkbox" onclick="AddtoCart('Table',1500)" id="9">
-<div id="thing">Mobile network antena issue</div>
-</label>
-											</div>
-										</td>
-										<td>
-											<div class="radiotext">
-												<label>INR 1000</label>
-											</div>
-										</td>
-										<td>
-<img class="controller img-circle" src="images/Mobile network antena issue.png"/>
-</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="checkbox">
-												<label>
-<input type="checkbox" onclick="AddtoCart('Table',1500)" id="10">
-<div id="thing">Power button problem</div>
-</label>
-											</div>
-										</td>
-										<td>
-											<div class="radiotext">
-												<label>INR 1500</label>	
-											</div>
-										</td>
-										<td>
-<img class="controller img-circle" src="images/Power button problem.png"/>
-</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="checkbox">
-												<label>
-<input type="checkbox" onclick="AddtoCart('Table',1500)" id="11">
-<div id="thing">Rear Camera Problem</div>
-</label>
-											</div>
-										</td>
-										<td>
-											<div class="radiotext">
-												<label>INR 1500</label>	
-											</div>
-										</td>
-										<td>
-<img class="controller img-circle" src="images/Rear Camera Problem.png"/>
-</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="checkbox">
-												<label>
-<input type="checkbox" onclick="AddtoCart('Table',1500)" id="12">
-<div id="thing">Software error</div>
-</label>
-											</div>
-										</td>
-										<td>
-											<div class="radiotext">
-												<label>INR 1500</label>	
-											</div>
-										</td>
-										<td>
-<img class="controller img-circle" src="images/Software error.png"/>
-</td>
-									</tr>
-								</tbody>
-							</table>
-							</div>
-							<div class="row"  id="btnStats">
-								<div class="col-xs-6 text-left">
-								<button type="button" class="btn btn-success btn-block">
-								Book a Service
-								</button>
-								</div>
-								
-								<div class="col-xs-6 text-right">
-								<button type="button" class="btn btn-success btn-block">
-									Book a Technician
-								</button>
-								</div>
-				</div>
-				</div>
-									
-						
-							<div class="main-login main-center" id="user_details" style="display:none;">
-								<h5 class="text-center">Service Details</h5>
-								<form method="post" action="#">
-								  <div class="form-group">
-										<label for="name" class="cols-sm-2 control-label">Your Name</label>
-										<div class="cols-sm-10">
-											<div class="input-group">
-												<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-												<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name">
-											</div>
-										</div>
-									</div>
-								  <div class="form-group">
-										<label for="mobile" class="cols-sm-2 control-label">Your Mobile number</label>
-										<div class="cols-sm-10">
-											<div class="input-group">
-												<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-												<input type="tel" name="phone" id="phone" required="required" maxlength="10" pattern="[0-9]{10}" class="form-control validate" placeholder="Enter your mobile number">
-											</div>
-										</div>
-									</div>
-								  <div class="form-group">
-									<label for="For user choise" class="cols-sm-2 control-label">Choose your Engagement type:</label>
-									<div class="row">
-										<div class="col-md-6">
-											<label><input type="radio" name="share" value="share"> Share your location</label>
-										</div>
-										<div class="col-md-6">
-											<label><input type="radio" name="share" value="customize"> Customise your location</label>
-										</div>
-									</div>
-								  </div>
-								  <div class="form-disabled" id="customizeDetails">
-								  <div class="form-group">
-									<label for="inputAddress">Address</label>
-									<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-								  </div>
-								  <div class="form-group">
-									<label for="inputAddress2">Address 2</label>
-									<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-								  </div>
-								  <div class="form-group">
-									<div class="row">
-										<div class="col-md-4">
-										<label for="Areaname">Area Name</label>
-										<input type="text" class="form-control" id="inputAddress2" placeholder="Area Name">
-										</div>
-										<div class="col-md-4">
-										<label for="City">City</label>
-										<input type="text" class="form-control" id="inputAddress2" placeholder="Enter city here">
-										</div>
-										<div class="col-md-4">
-										<label for="Zipcode">Zipcode</label>
-										<input type="text" class="form-control" id="inputAddress2" placeholder="Enter pincode here">
-										</div>
-									</div>
-								  </div>
-								  </div>
-								<button type="submit" class="btn btn-primary">Confirm Your Booking</button>
-								</form>
-							</div>							
-						
+          <div id="imei_bar">
+            <div id="controls">
+              <input id="imei" maxlength="15" required />
+              <button id="validate">ok</button>
+              <div style="clear:both;"></div>
+            </div>
+            <div id="result"><span id="message"> </span>&nbsp;<a> </a></div>
+          </div>
+          <p>
+            Just type an IMEI code in the field above and click in "ok" button
+            or type enter.
+          </p>
+          <div class="info">
+            <marquee
+              behaviour="scroll"
+              onmouseover="this.stop();"
+              onmouseout="this.start();"
+              width="70%"
+              direction="up"
+              scrollamount="2"
+              >**We are handle mobile services from <br />2016 model to till.<br />
+              **Company warranty will not accept here.
+            </marquee>
+          </div>
+        </div>
+        <div class="col-md-6 my-panel display">
+          <img
+            class="img-responsive"
+            src="images/banner.jpg"
+            alt="Banner images"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" id="brand_container">
+        <div class="col-md-1"></div>
+        <div class="col-xs-12 col-md-3 well">
+          <div class="row">
+            <img
+              class="img-responsive"
+              src="images/lenovo-k8-note-colors.jpg"
+              alt="mobile images"
+            />
+          </div>
+          <div class="row">
+            <h3 class="Model_name" id="model_name"></h3>
+            <div class="table-responsive">
+              <table class="table table-stripped">
+                <tbody>
+                  <tr>
+                    <td><strong>Device Name</strong>:</td>
+                    <td id="device_name"></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Device Model</strong>:</td>
+                    <td id="Year"></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Purchase Country</strong>:</td>
+                    <td id="counrty"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-7 well">
+          <div id="problem_details">
+            <div class="table-responsive">
+              <table class="table">
+                <tbody>
+                  <thead>
+                    <tr>
+                      <th class="br-none">Problem Details:</th>
+                      <th class="br-none">Cost</th>
+                      <th class="br-none">&nbsp;</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label>
+                          <input
+                            type="checkbox"
+                            data-problem="Battery Issue"
+                            data-cost="2000"
+                            id="1"
+                          />
+                          <div id="thing">Battery issue</div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radiotext">
+                        <label>INR 2000</label>
+                      </div>
+                    </td>
+                    <td>
+                      <img
+                        class="controller img-circle"
+                        src="images/Battery issue.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label>
+                          <input
+                            type="checkbox"
+                            data-problem="Charging Port Issue"
+                            data-cost="1500"
+                            id="2"
+                          />
+                          <div id="thing">Charging Port Issue</div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radiotext">
+                        <label>INR 1500</label>
+                      </div>
+                    </td>
+                    <td>
+                      <img
+                        class="controller img-circle"
+                        src="images/Charging_port_issue.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label>
+                          <input
+                            type="checkbox"
+                            data-problem="Display Broken"
+                            data-cost="1000"
+                            id="3"
+                          />
+                          <div id="thing">Display Broken</div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radiotext">
+                        <label>INR 1000</label>
+                      </div>
+                    </td>
+                    <td>
+                      <img
+                        class="controller img-circle"
+                        src="images/Display Broken.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label>
+                          <input
+                            type="checkbox"
+                            data-problem="Front Camera not working"
+                            data-cost="1500"
+                            id="4"
+                          />
+                          <div id="thing">Front Camera not working</div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radiotext">
+                        <label>INR 1500</label>
+                      </div>
+                    </td>
+                    <td>
+                      <img
+                        class="controller img-circle"
+                        src="images/Front Camera not working.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label>
+                          <input
+                            type="checkbox"
+                            data-problem="Headphone not working"
+                            data-cost="1000"
+                            id="5"
+                          />
+                          <div id="thing">Headphone not working</div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radiotext">
+                        <label>INR 1500</label>
+                      </div>
+                    </td>
+                    <td>
+                      <img
+                        class="controller img-circle"
+                        src="images/Headphone not woring.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label>
+                          <input
+                            type="checkbox"
+                            data-problem="Headphone not working"
+                            data-cost="1000"
+                            id="6"
+                          />
+                          <div id="thing">Liquid Damage</div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radiotext">
+                        <label>INR 1500</label>
+                      </div>
+                    </td>
+                    <td>
+                      <img
+                        class="controller img-circle"
+                        src="images/Liquid Damage.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label>
+                          <input
+                            type="checkbox"
+                            data-problem="Headphone not working"
+                            data-cost="1000"
+                            id="7"
+                          />
+                          <div id="thing">Loudspeaker error</div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radiotext">
+                        <label>INR 2000</label>
+                      </div>
+                    </td>
+                    <td>
+                      <img
+                        class="controller img-circle"
+                        src="images/Loudspeaker error.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label>
+                          <input
+                            type="checkbox"
+                            data-problem="Headphone not working"
+                            data-cost="1000"
+                            id="8"
+                          />
+                          <div id="thing">Mike problem</div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radiotext">
+                        <label>INR 1500</label>
+                      </div>
+                    </td>
+                    <td>
+                      <img
+                        class="controller img-circle"
+                        src="images/Mike problem.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label>
+                          <input
+                            type="checkbox"
+                            data-problem="Headphone not working"
+                            data-cost="1000"
+                            id="9"
+                          />
+                          <div id="thing">Mobile network antena issue</div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radiotext">
+                        <label>INR 1000</label>
+                      </div>
+                    </td>
+                    <td>
+                      <img
+                        class="controller img-circle"
+                        src="images/Mobile network antena issue.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label>
+                          <input
+                            type="checkbox"
+                            data-problem="Headphone not working"
+                            data-cost="1000"
+                            id="10"
+                          />
+                          <div id="thing">Power button problem</div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radiotext">
+                        <label>INR 1500</label>
+                      </div>
+                    </td>
+                    <td>
+                      <img
+                        class="controller img-circle"
+                        src="images/Power button problem.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label>
+                          <input
+                            type="checkbox"
+                            data-problem="Headphone not working"
+                            data-cost="1000"
+                            id="11"
+                          />
+                          <div id="thing">Rear Camera Problem</div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radiotext">
+                        <label>INR 1500</label>
+                      </div>
+                    </td>
+                    <td>
+                      <img
+                        class="controller img-circle"
+                        src="images/Rear Camera Problem.png"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <label>
+                          <input
+                            type="checkbox"
+                            data-problem="Headphone not working"
+                            data-cost="1000"
+                            id="12"
+                          />
+                          <div id="thing">Software error</div>
+                        </label>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="radiotext">
+                        <label>INR 1500</label>
+                      </div>
+                    </td>
+                    <td>
+                      <img
+                        class="controller img-circle"
+                        src="images/Software error.png"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row" id="btnStats">
+              <div class="col-xs-6 text-left">
+                <button type="button" class="btn btn-success btn-block">
+                  Book a Service
+                </button>
+              </div>
 
-			</div>
-			<div class="col-md-1">
-</div>
+              <div class="col-xs-6 text-right">
+                <button type="button" class="btn btn-success btn-block">
+                  Book a Technician
+                </button>
+              </div>
+            </div>
+          </div>
 
-			
-		</div>
-	</div>
-	
-	<script type="text/javascript" src="scripts/jquery-1.6.2.min.js">
-</script>
-    <script type="text/javascript" src="scripts/imei.js">
-</script>
-    <script type="text/javascript" src="scripts/cart.js">
-</script>
-	<script type="text/javascript" src="scripts/script.js">
-</script>
-<script>
-$(document).ready(function () {
-	$("#btnStats").click(function(){
-	$('#problem_details').css('display','none');
-	$('#user_details').css('display','block');
+          <div
+            class="main-login main-center"
+            id="user_details"
+            style="display:none;"
+          >
+            <h5 class="text-center">Service Details</h5>
+            <form method="post" action="#">
+              <div class="form-group">
+                <label for="name" class="cols-sm-2 control-label"
+                  >Your Name</label
+                >
+                <div class="cols-sm-10">
+                  <div class="input-group">
+                    <span class="input-group-addon"
+                      ><i class="fa fa-user fa" aria-hidden="true"></i
+                    ></span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="name"
+                      id="name"
+                      placeholder="Enter your Name"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="mobile" class="cols-sm-2 control-label"
+                  >Your Mobile number</label
+                >
+                <div class="cols-sm-10">
+                  <div class="input-group">
+                    <span class="input-group-addon"
+                      ><i class="fa fa-envelope fa" aria-hidden="true"></i
+                    ></span>
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      required="required"
+                      maxlength="10"
+                      pattern="[0-9]{10}"
+                      class="form-control validate"
+                      placeholder="Enter your mobile number"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="For user choise" class="cols-sm-2 control-label"
+                  >Choose your Engagement type:</label
+                >
+                <div class="row">
+                  <div class="col-md-6">
+                    <label
+                      ><input type="radio" name="share" value="share" /> Share
+                      your location</label
+                    >
+                  </div>
+                  <div class="col-md-6">
+                    <label
+                      ><input type="radio" name="share" value="customize" />
+                      Customise your location</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="form-disabled" id="customizeDetails">
+                <div class="form-group">
+                  <label for="inputAddress">Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="1234 Main St"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Address 2</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress2"
+                    placeholder="Apartment, studio, or floor"
+                  />
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label for="Areaname">Area Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputAddress2"
+                        placeholder="Area Name"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <label for="City">City</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputAddress2"
+                        placeholder="Enter city here"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <label for="Zipcode">Zipcode</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputAddress2"
+                        placeholder="Enter pincode here"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Confirm Your Booking
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
 
-	});
-});
+    <script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="scripts/imei.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/cart.js"></script>
 
-</script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('input[type="checkbox"]').click(function(){
-            if($(this).prop("checked") == true){
-                $('#cart-msg').css('display','none');
-				$('#my-cart-table').css('display','inline-table');
-            }
-            else if($(this).prop("checked") == false){
-                $('#cart-msg').css('display','block');
-				$('#my-cart-table').css('display','none');
-            }
-        });
-    });
-</script>
-</body>
+  </body>
 </html>

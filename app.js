@@ -28,10 +28,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'static/index.html'));
 });
 
-
 app.get('/brand', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'static/brand.html'));
 });
+
 app.get('/Service', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'static/Service.html'));
 });
