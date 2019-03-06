@@ -40,21 +40,21 @@
 						</span> My Cart</h4>
 						</div>
 						<div class="modal-body">
-						<div class="empty_msg">
+						<div class="empty_msg" id="cart-msg">
 							<h2>
 								Cart is Empty
 							</h2>
 							<p class="text-info">
-								Select your problem details and<br/> your order details will be shown.
+								Select your problem details and your order details will be shown.
 							</p>
 						</div>
-						<table class="table table-hover table-responsive" id="my-cart-table" style="display:none;">
+						<table class="table table-hover table-responsive" id="my-cart-table">
 							<tbody id="orderedProductsTblBody">
-						
+							
 							</tbody>
 							<tr>
 								<td class="text-right" id="cart_total">
-</td>
+								</td>
 							</tr>
 								
 						</table>
@@ -162,7 +162,7 @@
 										<td>
 											<div class="checkbox">
 												<label>
-<input type="checkbox" onclick="AddtoCart('Battery issue',2000)" id="1">
+<input type="checkbox" onclick="AddtoCart('Battery issue',2000)" data-toggle="toggle">
 <div id="thing">Battery issue</div>
 </label>
 											</div>
@@ -480,6 +480,21 @@ $(document).ready(function () {
 
 	});
 });
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $('#cart-msg').css('display','none');
+				$('#my-cart-table').css('display','inline-table');
+            }
+            else if($(this).prop("checked") == false){
+                $('#cart-msg').css('display','block');
+				$('#my-cart-table').css('display','none');
+            }
+        });
+    });
 </script>
 </body>
 </html>
