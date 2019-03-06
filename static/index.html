@@ -144,6 +144,7 @@
 					
 			</div>
 			<div class="col-xs-12 col-md-7 well">
+				<div  id="problem_details">
 				<div class="table-responsive">
 							<table class="table">
 								<tbody>
@@ -373,94 +374,89 @@
 								</tbody>
 							</table>
 							</div>
-							<div class="row">
+							<div class="row"  id="btnStats">
 								<div class="col-xs-6 text-left">
-								<button type="button" class="btn btn-success btn-block" disabled>
-								<a href="Service">Book a Service</a>
+								<button type="button" class="btn btn-success btn-block">
+								Book a Service
 								</button>
 								</div>
 								
 								<div class="col-xs-6 text-right">
-								<button type="button" class="btn btn-success btn-block" disabled>
-									<a href="Service">Book a Technician</a>
+								<button type="button" class="btn btn-success btn-block">
+									Book a Technician
 								</button>
 								</div>
 				</div>
+				</div>
+									
+						
+							<div class="main-login main-center" id="user_details" style="display:none;">
+								<h5 class="text-center">Service Details</h5>
+								<form method="post" action="#">
+								  <div class="form-group">
+										<label for="name" class="cols-sm-2 control-label">Your Name</label>
+										<div class="cols-sm-10">
+											<div class="input-group">
+												<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+												<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name">
+											</div>
+										</div>
+									</div>
+								  <div class="form-group">
+										<label for="mobile" class="cols-sm-2 control-label">Your Mobile number</label>
+										<div class="cols-sm-10">
+											<div class="input-group">
+												<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+												<input type="tel" name="phone" id="phone" required="required" maxlength="10" pattern="[0-9]{10}" class="form-control validate" placeholder="Enter your mobile number">
+											</div>
+										</div>
+									</div>
+								  <div class="form-group">
+									<label for="For user choise" class="cols-sm-2 control-label">Choose your Engagement type:</label>
+									<div class="row">
+										<div class="col-md-6">
+											<label><input type="radio" name="share" value="share"> Share your location</label>
+										</div>
+										<div class="col-md-6">
+											<label><input type="radio" name="share" value="customize"> Customise your location</label>
+										</div>
+									</div>
+								  </div>
+								  <div class="form-disabled" id="customizeDetails">
+								  <div class="form-group">
+									<label for="inputAddress">Address</label>
+									<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+								  </div>
+								  <div class="form-group">
+									<label for="inputAddress2">Address 2</label>
+									<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+								  </div>
+								  <div class="form-group">
+									<div class="row">
+										<div class="col-md-4">
+										<label for="Areaname">Area Name</label>
+										<input type="text" class="form-control" id="inputAddress2" placeholder="Area Name">
+										</div>
+										<div class="col-md-4">
+										<label for="City">City</label>
+										<input type="text" class="form-control" id="inputAddress2" placeholder="Enter city here">
+										</div>
+										<div class="col-md-4">
+										<label for="Zipcode">Zipcode</label>
+										<input type="text" class="form-control" id="inputAddress2" placeholder="Enter pincode here">
+										</div>
+									</div>
+								  </div>
+								  </div>
+								<button type="submit" class="btn btn-primary">Confirm Your Booking</button>
+								</form>
+							</div>							
+						
+
 			</div>
 			<div class="col-md-1">
 </div>
 
-<div class="row">
-			<div class="col-xs-12 col-md-3 well">
- 				<!--  <div class="panel panel-info">
-				<div class="panel-heading">
-					<div class="panel-title">
-						<div class="row">
-
-								<h3>
-<span class="glyphicon glyphicon-shopping-cart">
-</span> Summary</h3>
-							
-						</div>
-					</div>
-				</div>
-				<div class="panel-body text-left">
-					 <div class="row">
-						<div class="col-xs-6">
-							<h4 class="product-name" id="text">
-</h4>
-						</div>
-						<div class="col-xs-6">
-							<h6 class="text-right">
-</h6>
-						</div>
-					</div> 
-					
-					<div class="row">
-						<div class="col-xs-6">
-							<h4 class="product-name">
-<strong>Battery Issue</strong>
-</h4>
-						</div>
-						<div class="col-xs-6">
-							<h6 class="text-right">
-<strong>INR 2000</strong>
-</h6>
-						</div>
-					</div>
-					<hr>
-					<div class="row">
-						<div class="col-xs-6">
-							<h4 class="product-name">
-<strong>Display Broken</strong>
-</h4>
-						</div>
-						<div class="col-xs-6">
-							<h6 class="text-right">
-<strong>INR 1200</strong>
-</h6>
-						</div>
-					</div>
- 					
-				</div>
-				<div class="panel-footer text-left">
-					<div class="row">
-						<div class="col-xs-6">
-							<h4>Total </h4>
-						</div>
-						<div class="col-xs-6">
-							<h6 class="text-right">
-<strong>INR 2500</strong>
-</h6>
-						</div>
-					</div>
-				</div>
-			</div>  -->
- 			
-				
-				
-			</div>
-			</div>
 			
 		</div>
 	</div>
@@ -473,6 +469,14 @@
 </script>
 	<script type="text/javascript" src="scripts/script.js">
 </script>
+<script>
+$(document).ready(function () {
+	$("#btnStats").click(function(){
+	$('#problem_details').css('display','none');
+	$('#user_details').css('display','block');
 
+	});
+});
+</script>
 </body>
 </html>

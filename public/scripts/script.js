@@ -86,4 +86,5 @@ $(document).ready(function() {
 	$('#home_container').attr('style','display:block');
 	$('#brand_container').attr('style','display:none');
 
+
 });
