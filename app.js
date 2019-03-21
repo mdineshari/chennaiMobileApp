@@ -28,12 +28,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'static/index.html'));
 });
 
-app.get('/brand', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'static/brand.html'));
+app.get('/about', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'static/About.html'));
 });
 
-app.get('/Service', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'static/Service.html'));
+app.get('/Contact', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'static/Contact_us.html'));
 });
 
 server = app.listen(SERVER_PORT, '0.0.0.0', () => {

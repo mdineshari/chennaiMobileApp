@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mobile Repair Service</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="styles/imei.css" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Staatliches" rel="stylesheet"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="styles/util.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+<!--===============================================================================================-->
+<!--===============================================================================================-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+</head>
+<body>
+	 <nav class="navbar navbar-custom navbar-fixed-top circle">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>                        
+		  </button>
+          <a class="navbar-brand" href="/"
+            ><span class="glyphicon glyphicon-home"></span> Online Repair Factory</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+			<li><a class="hvr-underline-from-center active" href="/">Home</a></li>
+			<li><a class="hvr-underline-from-center" href="/about">About Us</a></li>
+			<li><a class="hvr-underline-from-center" href="/">Career</a></li>
+			<li><a class="hvr-underline-from-center" href="/Contact">Contact Us</a></li>
+            <li><span id="someelem" data-toggle="modal" data-target="#my-cart-modal" class="glyphicon glyphicon-shopping-cart my-cart-icon position"
+                ><span class="badge badge-notify my-cart-badge">0</span>
+              </span>
+            </li>
+			
+          </ul>
+        </div>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div id="tooltip" class="my-tooltip">
+      <div class="modal fade" id="my-cart-modal" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                <span class="glyphicon glyphicon-shopping-cart"> </span> My Cart
+              </h4>
+            </div>
+            <div class="modal-body">
+              <div class="empty_msg" id="cart-msg">
+                <h2>
+                  Cart is Empty
+                </h2>
+                <p class="text-info">
+                  Select your problem details and your order details will be
+                  shown.
+                </p>
+              </div>
+              <table class="table table-hover table-responsive" id="my-cart-table">
+                <tbody id="orderedProductsTblBody"></tbody>
+                <tr>
+                  <td><b>Total: </b></td>
+                  <td
+                    class="text-right"
+                    style="font-weight: bold"
+                    id="cart_total"
+                  ></td>
+                </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Send Us A Message
+				</span>
+
+				<label class="label-input100" for="first-name">Tell us your name *</label>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
+					<input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
+					<input class="input100" type="text" name="last-name" placeholder="Last name">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="email">Enter your email *</label>
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<input id="email" class="input100" type="text" name="email" placeholder="Eg. example@email.com">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="phone">Enter phone number</label>
+				<div class="wrap-input100">
+					<input id="phone" class="input100" type="text" name="phone" placeholder="Eg. +1 800 000000">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="message">Message *</label>
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<textarea id="message" class="input100" name="message" placeholder="Write us a message"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						Send Message
+					</button>
+				</div>
+			</form>
+
+			<div class="contact100-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
+				<div class="flex-w size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-map-marker"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							Address
+						</span>
+
+						<span class="txt2">
+							No-42, MN Complex, Wallers Road, Chennai - 600002.
+						</span>
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-phone-handset"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							Lets Talk
+						</span>
+
+						<span class="txt3">
+							Mob:- +91-9629546384/7010943236
+							<br/>Landline:- 044-42339878
+						</span>
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-envelope"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							General Support
+						</span>
+
+						<span class="txt3">
+							mkhalid@onlinerepairfactory.com
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+	<div class="social-icon-bar">
+	  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+	  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+	  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+	  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+	  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+	</div>
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+	<script type="text/javascript">
+    $(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $('#cart-msg').css('display','none');
+				$('#my-cart-table').css('display','inline-table');
+            }
+            else if($(this).prop("checked") == false){
+                $('#cart-msg').css('display','block');
+				$('#my-cart-table').css('display','none');
+            }
+        });
+    });
+</script>
+
+
+    
+    <script type="text/javascript" src="scripts/imei.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/cart.js"></script>
+</body>
+</html>

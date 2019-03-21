@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mobile Repair Service</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="styles/imei.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-custom navbar-fixed-top circle">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>                        
+		  </button>
+          <a class="navbar-brand" href="/"
+            ><span class="glyphicon glyphicon-home"></span> Online Repair Factory</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+			<li><a class="hvr-underline-from-center active" href="/">Home</a></li>
+			<li><a class="hvr-underline-from-center" href="/about">About Us</a></li>
+			<li><a class="hvr-underline-from-center" href="/">Career</a></li>
+			<li><a class="hvr-underline-from-center" href="/Contact">Contact Us</a></li>
+            <li><span id="someelem" data-toggle="modal" data-target="#my-cart-modal" class="glyphicon glyphicon-shopping-cart my-cart-icon position"
+                ><span class="badge badge-notify my-cart-badge">0</span>
+              </span>
+            </li>
+			
+          </ul>
+        </div>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div id="tooltip" class="my-tooltip">
+      <div class="modal fade" id="my-cart-modal" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                <span class="glyphicon glyphicon-shopping-cart"> </span> My Cart
+              </h4>
+            </div>
+            <div class="modal-body">
+              <div class="empty_msg" id="cart-msg">
+                <h2>
+                  Cart is Empty
+                </h2>
+                <p class="text-info">
+                  Select your problem details and your order details will be
+                  shown.
+                </p>
+              </div>
+              <table class="table table-hover table-responsive" id="my-cart-table">
+                <tbody id="orderedProductsTblBody"></tbody>
+                <tr>
+                  <td><b>Total: </b></td>
+                  <td
+                    class="text-right"
+                    style="font-weight: bold"
+                    id="cart_total"
+                  ></td>
+                </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<section class="page-introduction wout-icon">
+    <div class="container">
+      <div class="col-md-5 page-title">
+        <span>About Us</span>
+        <h1>Corporate Profile</h1>
+      </div>
+      <div class="col-md-7 page-desc">
+        <p>Launched in July 2018, Online Repair Factory has gone from strength to strength, in our first year of operation we carried out planing 10,000 mobile device repairs.  
+		</p>
+
+		<p>This is the WEB Application which will not ask you any Mobile Technical knowledge to get the exact service which your device needed. Really friendly equiped application and easy to use and opt the service. Our Repair Service Team has an opportunity to serve you with our Equipments and the Service Engineers always take the ownership of the issue we will rectify it. Each and every device before handover to customer quality dept will monitor and reensure the problem completed then the device will be given to our Delivery Agent.</p>
+
+		<p>Your Mobile (Rectified KID) will be safely reached your place and further problem always you can get in touch with our company to assist you in any mobile issue  </p>
+		
+		<p>Although we are based in Chennai, Greater India we operate across the whole of the INDIA. By offering a free post service to and from, we have served customers from all corners of the INDIA.</p>
+		<p>At Online Repair Factory, we repair a huge range of devices from iPhone, iPad, Samsung Galaxy, HTC, Sony Xperia, Google Nexus and much more. No matter what the fault is the chances are we can fix it for you, we repair hundreds of devices every single day and fix everything from iPhone screens to Samsung Galaxy charging ports.</p>
+
+		<p>Apart from our extremely competitive prices, which we check every week, there are many other reasons why you should use our trusted repair service. This includes our free post service, meaning you can send your device to us and receive it back without spending a penny more (terms and conditions apply). </p>
+
+		<p>The majority of our repairs we give our customers a maximum of 3 months warranty, which means, if for any reason the part used during the repair becomes faulty we will repair or replace this free of charge.</p>
+
+		<p>And for peace of mind, to ensure our customers get the best possible repair we only using grade A parts and have an extensive in-house testing process. Plus you can track the progress of your repair every step of the way with our free to use Order Tracker.  </p>
+
+		<p>You can read more about our repair process on the How It Works page.</p>
+
+		<p>ONLINE REPAIR FACTORY is the company who facilitate and unnecessary wating in order to complete their mobile repair. But here you dont have to waste your time at any occasion. We will spend our time and our inteligence to complete your work and give it back in your DOOR Step.</p>
+
+		<p>Our Company Goal is We Have to win the customer and Customer will won by getting this service team.
+		</p>
+      </div>
+    </div>
+  </section>
+	<footer>
+			<p class="text-primary" style="text-align:center">
+				Online Repair Factory - Repair is the Opportunity</p>
+	</footer>
+    <div class="social-icon-bar">
+	  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+	  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+	  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+	  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+	  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+	</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $('#cart-msg').css('display','none');
+				$('#my-cart-table').css('display','inline-table');
+            }
+            else if($(this).prop("checked") == false){
+                $('#cart-msg').css('display','block');
+				$('#my-cart-table').css('display','none');
+            }
+        });
+    });
+</script>
+
+
+    <script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="scripts/imei.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/cart.js"></script>
+  </body>
+
+</html>
