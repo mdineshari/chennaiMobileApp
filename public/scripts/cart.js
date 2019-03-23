@@ -40,7 +40,7 @@ function displayShoppingCart() {
   });
 
   //fill the count of checked problems in badge of the cart
-  $('#someelem span.badge').text(shoppingCart.length);
+  $('#someelem span.badge-notify').text(shoppingCart.length);
   //fill total cost of our shopping cart
   $('#cart_total').text(cart_total_price);
 }

@@ -31,6 +31,9 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'static/About.html'));
 });
+app.get('/career', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'static/Career.html'));
+});
 
 app.get('/Contact', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'static/Contact_us.html'));

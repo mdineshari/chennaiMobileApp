@@ -17,29 +17,19 @@ p{
 #brand_container{
 	padding-top:80px;
 }
+	.form-disabled{
+		display:none;
+	}
 .table-responsive .tabel{
 	margin-bottom:0px!important;
 }
-.position{
-	padding-top: 10px;
-    color: #ffffff;
-    font-size: 30px;
-	float:right!important;
-	margin-right:12px;
-}
+
 .site-hero-content {
     height: 678px;
     text-align: center;
     color: #FFF;
     
 }
-.badge-notify {
-    background-color:#fc8019;
-    position: relative;
-    top: -20px;
-    right: 10px;
-}
-
 
 button a{
     color:inherit;
@@ -101,7 +91,7 @@ div.table-responsive table>tbody>tr>td:nth-child(3) {
 h1 {
     font-family: 'Staatliches', cursive;
     font-size: 60px;
-    
+    color:#efe6ed;
     text-align: center;
 }
 .text-right{
@@ -375,7 +365,7 @@ h1 {
   color: white;
 }
 /* About us Style starts*/
-h1{
+.page-title h1{
 	text-align:right;
 	color:#a5ce39;
 }
@@ -405,6 +395,45 @@ h1{
 	text-align:left;
 }
 /* About us Style starts*/
+/* Career Style starts*/
+.bgimg {
+  
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.bgimg h1{
+	color:#a5ce39;
+}
+hr {
+  margin: auto;
+  width: 40%;
+}
+/* Career Style end*/
 /* Checkbox Style starts*/
 .switch {
   position: relative;
@@ -487,8 +516,33 @@ footer ul {
 #someelem
     {
     cursor: pointer;
+	border-radius:5px;
+	padding:5px;
+	border: 2px solid #fff;
     }
+/* Cart style starts */
+.position{
+	margin-top: 17px;
+    color: #ffffff;
+	float:right!important;
+	margin-right:12px;
+}
+#cart_total, .style, .badge-notify{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size:15px;
+}
+.badge-notify {	
+    position: relative;
+    
+    right: -5px;
+}
 
+#someelem:hover {
+    background: var(--mainPink);
+    border-color: var(--mainPink);
+    color: var(--mainWhite);
+}
+/* Cart style end */
 .my-tooltip p strong{
 	font-size:18px;
 	border-bottom: 1px solid #000;

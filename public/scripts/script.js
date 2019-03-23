@@ -100,6 +100,7 @@ $(document).ready(function() {
 });
 
 $('#btnStats').click(function() {
+  $(this).scrollTop(0);
   $('#problem_details').css('display', 'none');
   $('#user_details').css('display', 'block');
 });
