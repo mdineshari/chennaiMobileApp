@@ -538,9 +538,8 @@ footer ul {
 }
 
 #someelem:hover {
-    background: var(--mainPink);
-    border-color: var(--mainPink);
-    color: var(--mainWhite);
+    background: #696969;
+    color:#fff;
 }
 /* Cart style end */
 .my-tooltip p strong{

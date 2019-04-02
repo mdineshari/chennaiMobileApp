@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Online Repair Factory</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="styles/style.css" />
+    <link type="text/css" rel="stylesheet" href="styles/imei.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Staatliches" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+		.panel-container{
+			margin-top:160px;
+		}
+		.progress-content {
+			padding: 15px;
+		}
+		p{
+			color:#000;
+		}
+		.progress{
+			height:35px;
+		}
+		.progress-bar{
+			padding-top:15px;
+		}
+	</style>
+  </head>
+  <body>
+    <nav class="navbar navbar-custom navbar-fixed-top circle">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>                        
+		  </button>
+          <a class="navbar-brand" href="/"
+            ><span class="glyphicon glyphicon-home"></span> Online Repair Factory</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+			<li><a class="hvr-underline-from-center active" href="/">Home</a></li>
+			<li><a class="hvr-underline-from-center" href="/about">About Us</a></li>
+			<li><a class="hvr-underline-from-center" href="/support">Supported Mobiles</a></li>
+			<li><a class="hvr-underline-from-center" href="/career">Career</a></li>
+			<li><a class="hvr-underline-from-center" href="/Contact">Contact Us</a></li>
+            <li><span id="someelem" data-toggle="modal" data-target="#my-cart-modal" class="glyphicon glyphicon-shopping-cart my-cart-icon position"><span class="badge-notify my-cart-badge">0</span> <span class="style">Items - INR</span> <span id="cart_total">0</span>
+              </span>
+            </li>
+			
+          </ul>
+        </div>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div id="tooltip" class="my-tooltip">
+      <div class="modal fade" id="my-cart-modal" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">
+                <span class="glyphicon glyphicon-shopping-cart"> </span> My Cart
+              </h4>
+            </div>
+            <div class="modal-body">
+              <div class="empty_msg" id="cart-msg">
+                <h2>
+                  Cart is Empty
+                </h2>
+                <p class="text-info">
+                  Select your problem details and your order details will be
+                  shown.
+                </p>
+              </div>
+              <table class="table table-hover table-responsive" id="my-cart-table">
+                <tbody id="orderedProductsTblBody"></tbody>
+                <tr>
+                  <td><b>Total: </b></td>
+                  <td
+                    class="text-right"
+                    style="font-weight: bold"
+                    id="cart_total"
+                  ></td>
+                </tr>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<div class="container panel-container">
+	
+		
+	
+	<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">We are working with below listed Models</h3>
+        </div> 
+		<div class="progress-content">	
+			
+			<div class="progress">
+				<div class="progress-bar active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:45%">
+				APPLE Phone Models ---- 2000+
+				</div>
+				
+			</div>
+			<div class="progress">
+				<div class="progress-bar active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:45%">
+				APPLE Phone Models ---- 2000+
+				</div>
+				
+			</div>
+			<div class="progress">
+				<div class="progress-bar active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:45%">
+				APPLE Phone Models ---- 2000+
+				</div>
+				
+			
+			
+			</div>
+			
+		</div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
+                    <div class="col-xs-10 col-md-5">
+                        Asus
+                    </div>
+                    <div class="col-xs-2 col-md-1"><i class="fa fa-chevron-down pull-right"></i></div>
+                </div>
+                <div id="detail-1">
+                    <hr></hr>
+                    <div class="container">
+                        <div class="fluid-row">
+                            <div class="col-xs-12 col-md-6">
+                            <p><span>Asus Zenfone Max Pro (M2) ZB631KL</span>, <span>Asus Zenfone Max (M2) ZB633KL</span>, <span>Asus Zenfone Max (M1) ZB556KL</span>, <span>Asus ZenFone Lite (L1) ZA551KL</span>, <span>Asus ROG Phone</span>, <span>Asus ZenFone Live (L1) ZA550KL</span>, <span>Asus Zenfone Max Pro (M1) ZB601KL/ZB602K</span>, <span>Asus Zenfone 5z ZS620KL</span>, <span>Asus Zenfone 5 ZE620KL</span>, <span>Asus Zenfone 5 Lite ZC600KL</span>, <span>Asus Zenfone Max (M1) ZB555KL</span>, <span>Asus Zenfone Max Plus (M1) ZB570TL</span>, <span>Asus Zenfone V V520KL</span>, <span>Asus Zenfone 4 Pro ZS551KL</span>, <span>Asus Zenfone 4 ZE554KL</span>, <span>Asus Zenfone 4 Selfie Lite ZB553KL</span>, <span>Asus Zenfone 4 Selfie ZB553KL</span>, <span>Asus Zenfone 4 Selfie Pro ZD552KL</span>, <span>Asus Zenfone 4 Selfie ZD553KL</span>, <span>Asus Zenfone 4 Max ZC520KL</span>, <span>Asus Zenfone 4 Max Plus ZC554KL</span>, <span>Asus Zenfone 4 Max Pro ZC554KL</span>, <span>Asus Zenfone 4 Max ZC554KL</span>, <span>Asus Zenpad Z8s ZT582KL</span>, <span>Asus Zenpad 3s 8.0 Z582KL</span>, <span>Asus Zenfone Go ZB552KL</span>, <span>Asus Zenfone Live ZB501KL</span>, <span>Asus Zenfone 3s Max ZC521TL</span>, <span>Asus Zenpad 3S 10 Z500KL</span>, <span>Asus Zenfone AR ZS571KL</span>, <span>Asus Zenfone 3 Zoom ZE553KL</span>, <span>Asus Zenfone Go ZB690KG</span>, <span>Asus Zenpad 3 8.0 Z581KL</span>, <span>Asus Zenfone Go ZB500KL</span>, <span>Asus Zenfone 3 Max ZC553KL</span>, <span>Asus Zenfone 3 Deluxe 5.5 ZS550KL</span>, <span>Asus Zenpad Z10 ZT500KL</span>, <span>Asus Zenwatch 3 WI503Q</span>, <span>Asus Zenpad 3S 10 Z500M</span>, <span>Asus Zenfone 3 Max ZC520TL</span>, <span>Asus Zenfone 3 Laser ZC551KL</span>, <span>Asus Zenfone 3 ZE520KL</span>, <span>Asus Zenfone Pegasus 3</span>, <span>Asus Zenpad Z8</span>, <span>Asus Zenfone 3 Ultra ZU680KL</span>, <span>Asus Zenfone 3 Deluxe ZS570KL</span>, <span>Asus Zenfone 3 ZE552KL</span>, <span>Asus Zenfone Max ZC550KL (2016)</span>, <span>Asus Zenfone Go ZB450KL</span>, <span>Asus Zenfone Go ZB452KG</span>, <span>Asus Zenfone Go ZB551KL</span>, <span>Asus Zenfone Go T500</span>, <span>Asus Zenfone Go ZC451TG</span>, <span>Asus Live G500TG</span>, <span>Asus Zenwatch 2 WI501Q</span>, <span>Asus Zenwatch 2 WI502Q</span>, <span>Asus Zenwatch WI500Q</span>, <span>Asus Zenfone 2 Laser ZE551KL</span>, <span>Asus Zenfone Zoom ZX551ML</span>, <span>Asus Zenpad 8.0 Z380M</span>, <span>Asus Zenpad 10 Z300M</span>, <span>Asus Zenpad 10 Z300C</span>, <span>Asus Zenfone Go ZC500TG</span>, <span>Asus Zenfone Max ZC550KL</span>, <span>Asus Zenfone 2 Deluxe ZE551ML</span>, <span>Asus Zenfone 2 Laser ZE601KL</span>, <span>Asus Zenfone 2 Laser ZE600KL</span>, <span>Asus Zenfone 2 Laser ZE550KL</span>, <span>Asus Zenfone 2 Laser ZE500KG</span>, <span>Asus Zenfone 2 Laser ZE500KL</span>, <span>Asus Zenpad 7.0 Z370CG</span>, <span>Asus Zenfone 2E</span>, <span>Asus Pegasus 2 Plus</span>, <span>Asus Zenpad S 8.0 Z580CA</span>, <span>Asus Zenpad S 8.0 Z580C</span>, <span>Asus Zenpad 8.0 Z380KL</span>, <span>Asus Zenpad 8.0 Z380C</span>, <span>Asus Zenpad C 7.0 Z170MG</span>, <span>Asus Zenpad C 7.0</span>, <span>Asus Zenfone Selfie ZD551KL</span>, <span>Asus Zenfone 2 ZE500CL</span>, <span>Asus Zenfone 2 ZE550ML</span>, <span>Asus Zenfone 2 ZE551ML</span>, <span>Asus Fonepad 7 FE375CL</span>, <span>Asus Zenfone C ZC451CG</span>, <span>Asus Fonepad 7 FE171CG</span>, <span>Asus Zenfone Zoom ZX550</span>, <span>Asus Pegasus</span>, <span>Asus Zenfone 5 Lite A502CG (2014)</span>, <span>Asus Memo Pad 10 ME103K</span>, <span>Asus PadFone X mini</span>, <span>Asus Memo Pad 7 ME572CL</span>, <span>Asus Memo Pad 7 ME572C</span>, <span>Asus Zenfone 5 A500KL (2014)</span>, <span>Asus Zenfone 4 A450CG (2014)</span>, <span>Asus Memo Pad 8 ME581CL</span>, <span>Asus Memo Pad 8 ME181C</span>, <span>Asus Memo Pad 7 ME176C</span>, <span>Asus Fonepad 8 FE380CG</span>, <span>Asus Fonepad 7 FE375CXG</span>, <span>Asus Fonepad 7 FE375CG</span>, <span>Asus Transformer Pad TF303CL</span>, <span>Asus Transformer Pad TF103C</span>, <span>Asus Fonepad 7 (2014)</span>, <span>Asus PadFone X</span>, <span>Asus PadFone S</span>, <span>Asus PadFone Infinity Lite</span>, <span>Asus PadFone E</span>, <span>Asus Zenfone 6 A601CG</span>, <span>Asus Zenfone 6 A600CG</span>, <span>Asus Zenfone 5 A501CG (2015)</span>, <span>Asus Zenfone 5 A500CG (2014)</span>
+</p>   
+							</div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
+                    <div class="col-xs-10 col-md-5">
+                        Microsoft
+                    </div>
+                    <div class="col-xs-2 col-md-1"><i class="fa fa-chevron-down pull-right"></i></div>
+                </div>
+                <div id="detail-2">
+                    <hr></hr>
+                    <div class="container">
+                        <div class="fluid-row">
+                            <div class="col-xs-12 col-md-6">
+                               <p>Microsoft Lumia 650</span>, <span>Microsoft Lumia 950 XL Dual SIM</span>, <span>Microsoft Lumia 950 XL</span>, <span>Microsoft Lumia 950 Dual SIM</span>, <span>Microsoft Lumia 950</span>, <span>Microsoft Lumia 550</span>, <span>Microsoft Lumia 540 Dual SIM</span>, <span>Microsoft Lumia 430 Dual SIM</span>, <span>Microsoft Lumia 640 XL LTE Dual SIM</span>, <span>Microsoft Lumia 640 XL LTE</span>, <span>Microsoft Lumia 640 XL Dual SIM</span>, <span>Microsoft Lumia 640 XL</span>, <span>Microsoft Lumia 640 LTE Dual SIM</span>, <span>Microsoft Lumia 640 LTE</span>, <span>Microsoft Lumia 640 Dual SIM</span>, <span>Microsoft Lumia 532 Dual SIM</span>, <span>Microsoft Lumia 532</span>, <span>Microsoft Lumia 435 Dual SIM</span>, <span>Microsoft Lumia 435</span>, <span>Microsoft Lumia 535 Dual SIM</span>, <span>Microsoft Lumia 535</span>, <span>Microsoft Surface 2</span>, <span>Microsoft Surface</span>, <span>Microsoft Kin TWOm</span>, <span>Microsoft Kin ONEm</span>, <span>Microsoft Kin Two</span>, <span>Microsoft Kin One</span>, <span>Microsoft Lumia 1030</span>, <span>Microsoft Lumia 1330</span>, <span>Microsoft Lumia 850</span>
+</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
+                    <div class="col-xs-10 col-md-5">
+                        Blackberry
+                    </div>
+                    <div class="col-xs-2 col-md-1"><i class="fa fa-chevron-down pull-right"></i></div>
+                </div>
+                <div id="detail-3">
+                    <hr></hr>
+                    <div class="container">
+                        <div class="fluid-row">
+                            <div class="col-xs-12 col-md-6">
+                                <p><span>Blackberry KEY2 LE</span>, <span>Blackberry Evolve X</span>, <span>Blackberry Evolve</span>, <span>Blackberry KEY2</span>, <span>Blackberry Motion</span>, <span>Blackberry Aurora</span>, <span>Blackberry Keyone</span>, <span>Blackberry DTEK60</span>, <span>Blackberry DTEK50</span>, <span>Blackberry Priv</span>, <span>Blackberry Leap</span>, <span>Blackberry Classic Non Camera</span>, <span>Blackberry Porsche Design P'9983</span>, <span>Blackberry Passport</span>, <span>Blackberry Classic</span>, <span>Blackberry Z3</span>, <span>Blackberry Porsche Design P'9982</span>, <span>Blackberry Z30</span>, <span>Blackberry 9720</span>, <span>Blackberry Q5</span>, <span>Blackberry Z10</span>, <span>Blackberry Q10</span>, <span>Blackberry 4G LTE Playbook</span>, <span>Blackberry Curve 9320</span>, <span>Blackberry Curve 9220</span>, <span>Blackberry Curve 9380</span>, <span>Blackberry Bold 9790</span>, <span>Blackberry Porsche Design P'9981</span>, <span>Blackberry Curve 9370</span>, <span>Blackberry Curve 9360</span>, <span>Blackberry Curve 9350</span>, <span>Blackberry Torch 9810</span>, <span>Blackberry Torch 9860</span>, <span>Blackberry Torch 9850</span>, <span>Blackberry Bold Touch 9900</span>, <span>Blackberry Bold Touch 9930</span>, <span>Blackberry 4G Playbook HSPA+</span>, <span>Blackberry Playbook Wimax</span>, <span>Blackberry Playbook</span>, <span>Blackberry Bold 9780</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</li>
+        </ul>
+	</div>
+</div>
+	<footer>
+			<p class="text-primary" style="text-align:center">
+				Online Repair Factory - Repair is the Opportunity</p>
+	</footer>
+    <div class="social-icon-bar">
+	  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+	  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+	  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+	  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+	  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+	</div>
+
+	<script type="text/javascript">
+    $(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                $('#cart-msg').css('display','none');
+				$('#my-cart-table').css('display','inline-table');
+            }
+            else if($(this).prop("checked") == false){
+                $('#cart-msg').css('display','block');
+				$('#my-cart-table').css('display','none');
+            }
+        });
+		$('[id^=detail-]').hide();
+		$('.toggle').click(function() {
+			$input = $( this );
+			$target = $('#'+$input.attr('data-toggle'));
+			$target.slideToggle();
+		});
+    });
+</script>
+	<script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="scripts/imei.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+	<script type="text/javascript" src="scripts/cart.js"></script>
+	<script type="text/javascript" src="scripts/index.js"></script>
+	<script src="scripts/geo.js"></script>
+</body>
+</html>
