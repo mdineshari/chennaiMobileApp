@@ -429,10 +429,10 @@ h1 {
 .bgimg h1{
 	color:#a5ce39;
 }
-hr {
-  margin: auto;
+/* hr { 
+  margin: auto; 
   width: 40%;
-}
+ } */
 /* Career Style end*/
 /* Checkbox Style starts*/
 .switch {
@@ -618,6 +618,9 @@ div.table-responsive table>tbody>tr>td:nth-child(3) {
 }
 #controls input{
 	font-size:22px!important;
+}
+.social-icon-bar{
+	display:none;
 }
 } 
 

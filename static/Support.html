@@ -13,10 +13,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<style>
+		.multi-column-dropdown {
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+		}
+		ul li{
+			text-align:left;
+		}
 		.panel-container{
 			margin-top:160px;
 		}
-		.progress-content {
+		.progress-content, .searchbar {
 			padding: 15px;
 		}
 		p{
@@ -28,6 +36,9 @@
 		.progress-bar{
 			padding-top:15px;
 		}
+		.popup-details{
+			max-width:600px;
+		}
 	</style>
   </head>
   <body>
@@ -36,12 +47,12 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>                        
+			<li class="icon-bar"></li>
+			<li class="icon-bar"></li>
+			<li class="icon-bar"></li>                        
 		  </button>
           <a class="navbar-brand" href="/"
-            ><span class="glyphicon glyphicon-home"></span> Online Repair Factory</a>
+            ><li class="glyphicon glyphicon-home"></li> Online Repair Factory</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
@@ -65,10 +76,10 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
+                <li aria-hidden="true">×</li>
               </button>
               <h4 class="modal-title" id="myModalLabel">
-                <span class="glyphicon glyphicon-shopping-cart"> </span> My Cart
+                <li class="glyphicon glyphicon-shopping-cart"> </li> My Cart
               </h4>
             </div>
             <div class="modal-body">
@@ -103,13 +114,141 @@
       </div>
     </div>
 	<div class="container panel-container">
-	
-		
+	<div class="row well">
+
+	<div class="col-md-6">	
 	
 	<div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">We are working with below listed Models</h3>
+            <h3 class="panel-title">We are support with below listed Models</h3>
         </div> 
+		<div class="searchbar">
+		<p>Type here to find your model:</p>  
+		<input class="form-control" id="myInput" type="text" placeholder="Search..">
+		</div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
+                    <div class="col-md-10">
+                        Asus
+                    </div>
+                    <div class="col-md-2"><i class="fa fa-chevron-down pull-right"></i></div>
+                </div>
+                
+            </li>
+            <li class="list-group-item">
+                <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
+                    <div class="col-md-10">
+                        Microsoft
+                    </div>
+                    <div class="col-md-2"><i class="fa fa-chevron-down pull-right"></i></div>
+                </div>
+                <div id="detail-2">
+                    <hr></hr>
+                    <div class="container popup-details">
+                        <div class="row">
+                            <div class="col-md-6">
+                               <ul class="multi-column-dropdown"><li>Microsoft Lumia 650</li> <li>Microsoft Lumia 950 XL Dual SIM</li> <li>Microsoft Lumia 950 XL</li> <li>Microsoft Lumia 950 Dual SIM</li> <li>Microsoft Lumia 950</li> <li>Microsoft Lumia 550</li> <li>Microsoft Lumia 540 Dual SIM</li> <li>Microsoft Lumia 430 Dual SIM</li> <li>Microsoft Lumia 640 XL LTE Dual SIM</li></ul>
+							</div>
+							<div class="col-md-6">
+                            <ul class="multi-column-dropdown"> <li>Microsoft Lumia 640 XL LTE</li> <li>Microsoft Lumia 640 XL Dual SIM</li> <li>Microsoft Lumia 640 XL</li> <li>Microsoft Lumia 640 LTE Dual SIM</li> <li>Microsoft Lumia 640 LTE</li> <li>Microsoft Lumia 640 Dual SIM</li> <li>Microsoft Lumia 532 Dual SIM</li> <li>Microsoft Lumia 532</li> <li>Microsoft Lumia 435 Dual SIM</li> <li>Microsoft Lumia 435</li></ul>
+							</div>
+							<div class="col-md-6">
+                            <ul class="multi-column-dropdown"> <li>Microsoft Lumia 535 Dual SIM</li> <li>Microsoft Lumia 535</li> <li>Microsoft Surface 2</li> <li>Microsoft Surface</li> <li>Microsoft Kin TWOm</li> <li>Microsoft Kin ONEm</li> <li>Microsoft Kin Two</li> <li>Microsoft Kin One</li> <li>Microsoft Lumia 1030</li> <li>Microsoft Lumia 1330</li> <li>Microsoft Lumia 850</li></ul>
+ 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
+                    <div class="col-md-10">
+                        Blackberry
+                    </div>
+                    <div class="col-md-2"><i class="fa fa-chevron-down pull-right"></i></div>
+                </div>
+                <div id="detail-3">
+                    <hr></hr>
+                    <div class="container popup-details">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="multi-column-dropdown"><li>Blackberry KEY2 LE</li> <li>Blackberry Evolve X</li> <li>Blackberry Evolve</li> <li>Blackberry KEY2</li> <li>Blackberry Motion</li> <li>Blackberry Aurora</li> <li>Blackberry Keyone</li> <li>Blackberry DTEK60</li> <li>Blackberry DTEK50</li> <li>Blackberry Priv</li> <li>Blackberry Leap</li> <li>Blackberry Classic Non Camera</li></ul>
+							</div>
+							<div class="col-md-6">
+                            <ul  class="multi-column-dropdown"> <li>Blackberry Porsche Design P'9983</li> <li>Blackberry Passport</li> <li>Blackberry Classic</li> <li>Blackberry Z3</li> <li>Blackberry Porsche Design P'9982</li> <li>Blackberry Z30</li> <li>Blackberry 9720</li> <li>Blackberry Q5</li> <li>Blackberry Z10</li> <li>Blackberry Q10</li> <li>Blackberry 4G LTE Playbook</li> <li>Blackberry Curve 9320</li> <li>Blackberry Curve 9220</li> <li>Blackberry Curve 9380</li> <li>Blackberry Bold 9790</li></ul>
+							</div>
+							<div class="col-md-6">
+                            <ul class="multi-column-dropdown"> <li>Blackberry Porsche Design P'9981</li> <li>Blackberry Curve 9370</li> <li>Blackberry Curve 9360</li> <li>Blackberry Curve 9350</li> <li>Blackberry Torch 9810</li> <li>Blackberry Torch 9860</li> <li>Blackberry Torch 9850</li> <li>Blackberry Bold Touch 9900</li> <li>Blackberry Bold Touch 9930</li> <li>Blackberry 4G Playbook HSPA+</li> <li>Blackberry Playbook Wimax</li> <li>Blackberry Playbook</li> <li>Blackberry Bold 9780</li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</li>
+            <li class="list-group-item">
+                <div class="row toggle" id="dropdown-detail-4" data-toggle="detail-4">
+                    <div class="col-md-10">
+                        Blackberry
+                    </div>
+                    <div class="col-md-2"><i class="fa fa-chevron-down pull-right"></i></div>
+                </div>
+                <div id="detail-4">
+                    <hr></hr>
+                    <div class="container popup-details">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		</li>
+            <li class="list-group-item">
+                <div class="row toggle" id="dropdown-detail-5" data-toggle="detail-5">
+                    <div class="col-md-10">
+                        Blackberry
+                    </div>
+                    <div class="col-md-2"><i class="fa fa-chevron-down pull-right"></i></div>
+                </div>
+                <div id="detail-5">
+                    <hr></hr>
+                    <div class="container popup-details">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</li>
+        </ul>
+	</div>
+</div>
+
+	<div class="col-md-6">
+		<div class="list-details">
+			<div id="detail-1">
+                    <hr></hr>
+                    <div class="container popup-details">
+                        <div class="row">
+                            <div class="col-md-6">
+                            <ul class="multi-column-dropdown">
+							<li>Asus Zenfone Max Pro (M2) ZB631KL</li> <li>Asus Zenfone Max (M2) ZB633KL</li> <li>Asus Zenfone Max (M1) ZB556KL</li> <li>Asus ZenFone Lite (L1) ZA551KL</li> <li>Asus ROG Phone</li> <li>Asus ZenFone Live (L1) ZA550KL</li> <li>Asus Zenfone Max Pro (M1) ZB601KL/ZB602K</li> <li>Asus Zenfone 5z ZS620KL</li> <li>Asus Zenfone 5 ZE620KL</li> <li>Asus Zenfone 5 Lite ZC600KL</li> <li>Asus Zenfone Max (M1) ZB555KL</li> <li>Asus Zenfone Max Plus (M1) ZB570TL</li> <li>Asus Zenfone V V520KL</li> <li>Asus Zenfone 4 Pro ZS551KL</li> <li>Asus Zenfone 4 ZE554KL</li> <li>Asus Zenfone 4 Selfie Lite ZB553KL</li> <li>Asus Zenfone 4 Selfie ZB553KL</li> <li>Asus Zenfone 4 Selfie Pro ZD552KL</li> <li>Asus Zenfone 4 Selfie ZD553KL</li> <li>Asus Zenfone 4 Max ZC520KL</li> <li>Asus Zenfone 4 Max Plus ZC554KL</li> <li>Asus Zenfone 4 Max Pro ZC554KL</li> <li>Asus Zenfone 4 Max ZC554KL</li> <li>Asus Zenpad Z8s ZT582KL</li> <li>Asus Zenpad 3s 8.0 Z582KL</li> <li>Asus Zenfone Go ZB552KL</li> <li>Asus Zenfone Live ZB501KL</li> <li>Asus Zenfone 3s Max ZC521TL</li> <li>Asus Zenpad 3S 10 Z500KL</li> <li>Asus Zenfone AR ZS571KL</li> <li>Asus Zenfone 3 Zoom ZE553KL</li> <li>Asus Zenfone Go ZB690KG</li> <li>Asus Zenpad 3 8.0 Z581KL</li> <li>Asus Zenfone Go ZB500KL</li> <li>Asus Zenfone 3 Max ZC553KL</li> <li>Asus Zenfone 3 Deluxe 5.5 ZS550KL</li></ul>
+							</div>
+							<div class="col-md-6">
+                            <ul class="multi-column-dropdown">
+							<li>Asus Zenpad Z10 ZT500KL</li> <li>Asus Zenwatch 3 WI503Q</li> <li>Asus Zenpad 3S 10 Z500M</li> <li>Asus Zenfone 3 Max ZC520TL</li> <li>Asus Zenfone 3 Laser ZC551KL</li> <li>Asus Zenfone 3 ZE520KL</li> <li>Asus Zenfone Pegasus 3</li> <li>Asus Zenpad Z8</li> <li>Asus Zenfone 3 Ultra ZU680KL</li> <li>Asus Zenfone 3 Deluxe ZS570KL</li> <li>Asus Zenfone 3 ZE552KL</li> <li>Asus Zenfone Max ZC550KL (2016)</li> <li>Asus Zenfone Go ZB450KL</li> <li>Asus Zenfone Go ZB452KG</li> <li>Asus Zenfone Go ZB551KL</li> <li>Asus Zenfone Go T500</li> <li>Asus Zenfone Go ZC451TG</li> <li>Asus Live G500TG</li> <li>Asus Zenwatch 2 WI501Q</li> <li>Asus Zenwatch 2 WI502Q</li> <li>Asus Zenwatch WI500Q</li> <li>Asus Zenfone 2 Laser ZE551KL</li> <li>Asus Zenfone Zoom ZX551ML</li> <li>Asus Zenpad 8.0 Z380M</li> <li>Asus Zenpad 10 Z300M</li> <li>Asus Zenpad 10 Z300C</li> <li>Asus Zenfone Go ZC500TG</li> <li>Asus Zenfone Max ZC550KL</li> <li>Asus Zenfone 2 Deluxe ZE551ML</li> <li>Asus Zenfone 2 Laser ZE601KL</li> <li>Asus Zenfone 2 Laser ZE600KL</li> <li>Asus Zenfone 2 Laser ZE550KL</li> <li>Asus Zenfone 2 Laser ZE500KG</li> <li>Asus Zenfone 2 Laser ZE500KL</li> <li>Asus Zenpad 7.0 Z370CG</li> <li>Asus Zenfone 2E</li> <li>Asus Pegasus 2 Plus</li></ul>
+							</div>
+							<div class="col-md-6">
+                            <ul class="multi-column-dropdown"> 
+							<li>Asus Zenpad S 8.0 Z580CA</li> <li>Asus Zenpad S 8.0 Z580C</li> <li>Asus Zenpad 8.0 Z380KL</li> <li>Asus Zenpad 8.0 Z380C</li> <li>Asus Zenpad C 7.0 Z170MG</li> <li>Asus Zenpad C 7.0</li> <li>Asus Zenfone Selfie ZD551KL</li> <li>Asus Zenfone 2 ZE500CL</li> <li>Asus Zenfone 2 ZE550ML</li> <li>Asus Zenfone 2 ZE551ML</li> <li>Asus Fonepad 7 FE375CL</li> <li>Asus Zenfone C ZC451CG</li> <li>Asus Fonepad 7 FE171CG</li> <li>Asus Zenfone Zoom ZX550</li> <li>Asus Pegasus</li> <li>Asus Zenfone 5 Lite A502CG (2014)</li> <li>Asus Memo Pad 10 ME103K</li> <li>Asus PadFone X mini</li> <li>Asus Memo Pad 7 ME572CL</li> <li>Asus Memo Pad 7 ME572C</li> <li>Asus Zenfone 5 A500KL (2014)</li> <li>Asus Zenfone 4 A450CG (2014)</li> <li>Asus Memo Pad 8 ME581CL</li> <li>Asus Memo Pad 8 ME181C</li> <li>Asus Memo Pad 7 ME176C</li> <li>Asus Fonepad 8 FE380CG</li> <li>Asus Fonepad 7 FE375CXG</li> <li>Asus Fonepad 7 FE375CG</li> <li>Asus Transformer Pad TF303CL</li> <li>Asus Transformer Pad TF103C</li> <li>Asus Fonepad 7 (2014)</li> <li>Asus PadFone X</li> <li>Asus PadFone S</li> <li>Asus PadFone Infinity Lite</li> <li>Asus PadFone E</li> <li>Asus Zenfone 6 A601CG</li> <li>Asus Zenfone 6 A600CG</li> <li>Asus Zenfone 5 A501CG (2015)</li> <li>Asus Zenfone 5 A500CG (2014)</li></ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		
 		<div class="progress-content">	
 			
 			<div class="progress">
@@ -119,13 +258,13 @@
 				
 			</div>
 			<div class="progress">
-				<div class="progress-bar active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:45%">
+				<div class="progress-bar active" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
 				APPLE Phone Models ---- 2000+
 				</div>
 				
 			</div>
 			<div class="progress">
-				<div class="progress-bar active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:45%">
+				<div class="progress-bar active" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
 				APPLE Phone Models ---- 2000+
 				</div>
 				
@@ -134,64 +273,10 @@
 			</div>
 			
 		</div>
-        <ul class="list-group">
-            <li class="list-group-item">
-                <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
-                    <div class="col-xs-10 col-md-5">
-                        Asus
-                    </div>
-                    <div class="col-xs-2 col-md-1"><i class="fa fa-chevron-down pull-right"></i></div>
-                </div>
-                <div id="detail-1">
-                    <hr></hr>
-                    <div class="container">
-                        <div class="fluid-row">
-                            <div class="col-xs-12 col-md-6">
-                            <p><span>Asus Zenfone Max Pro (M2) ZB631KL</span>, <span>Asus Zenfone Max (M2) ZB633KL</span>, <span>Asus Zenfone Max (M1) ZB556KL</span>, <span>Asus ZenFone Lite (L1) ZA551KL</span>, <span>Asus ROG Phone</span>, <span>Asus ZenFone Live (L1) ZA550KL</span>, <span>Asus Zenfone Max Pro (M1) ZB601KL/ZB602K</span>, <span>Asus Zenfone 5z ZS620KL</span>, <span>Asus Zenfone 5 ZE620KL</span>, <span>Asus Zenfone 5 Lite ZC600KL</span>, <span>Asus Zenfone Max (M1) ZB555KL</span>, <span>Asus Zenfone Max Plus (M1) ZB570TL</span>, <span>Asus Zenfone V V520KL</span>, <span>Asus Zenfone 4 Pro ZS551KL</span>, <span>Asus Zenfone 4 ZE554KL</span>, <span>Asus Zenfone 4 Selfie Lite ZB553KL</span>, <span>Asus Zenfone 4 Selfie ZB553KL</span>, <span>Asus Zenfone 4 Selfie Pro ZD552KL</span>, <span>Asus Zenfone 4 Selfie ZD553KL</span>, <span>Asus Zenfone 4 Max ZC520KL</span>, <span>Asus Zenfone 4 Max Plus ZC554KL</span>, <span>Asus Zenfone 4 Max Pro ZC554KL</span>, <span>Asus Zenfone 4 Max ZC554KL</span>, <span>Asus Zenpad Z8s ZT582KL</span>, <span>Asus Zenpad 3s 8.0 Z582KL</span>, <span>Asus Zenfone Go ZB552KL</span>, <span>Asus Zenfone Live ZB501KL</span>, <span>Asus Zenfone 3s Max ZC521TL</span>, <span>Asus Zenpad 3S 10 Z500KL</span>, <span>Asus Zenfone AR ZS571KL</span>, <span>Asus Zenfone 3 Zoom ZE553KL</span>, <span>Asus Zenfone Go ZB690KG</span>, <span>Asus Zenpad 3 8.0 Z581KL</span>, <span>Asus Zenfone Go ZB500KL</span>, <span>Asus Zenfone 3 Max ZC553KL</span>, <span>Asus Zenfone 3 Deluxe 5.5 ZS550KL</span>, <span>Asus Zenpad Z10 ZT500KL</span>, <span>Asus Zenwatch 3 WI503Q</span>, <span>Asus Zenpad 3S 10 Z500M</span>, <span>Asus Zenfone 3 Max ZC520TL</span>, <span>Asus Zenfone 3 Laser ZC551KL</span>, <span>Asus Zenfone 3 ZE520KL</span>, <span>Asus Zenfone Pegasus 3</span>, <span>Asus Zenpad Z8</span>, <span>Asus Zenfone 3 Ultra ZU680KL</span>, <span>Asus Zenfone 3 Deluxe ZS570KL</span>, <span>Asus Zenfone 3 ZE552KL</span>, <span>Asus Zenfone Max ZC550KL (2016)</span>, <span>Asus Zenfone Go ZB450KL</span>, <span>Asus Zenfone Go ZB452KG</span>, <span>Asus Zenfone Go ZB551KL</span>, <span>Asus Zenfone Go T500</span>, <span>Asus Zenfone Go ZC451TG</span>, <span>Asus Live G500TG</span>, <span>Asus Zenwatch 2 WI501Q</span>, <span>Asus Zenwatch 2 WI502Q</span>, <span>Asus Zenwatch WI500Q</span>, <span>Asus Zenfone 2 Laser ZE551KL</span>, <span>Asus Zenfone Zoom ZX551ML</span>, <span>Asus Zenpad 8.0 Z380M</span>, <span>Asus Zenpad 10 Z300M</span>, <span>Asus Zenpad 10 Z300C</span>, <span>Asus Zenfone Go ZC500TG</span>, <span>Asus Zenfone Max ZC550KL</span>, <span>Asus Zenfone 2 Deluxe ZE551ML</span>, <span>Asus Zenfone 2 Laser ZE601KL</span>, <span>Asus Zenfone 2 Laser ZE600KL</span>, <span>Asus Zenfone 2 Laser ZE550KL</span>, <span>Asus Zenfone 2 Laser ZE500KG</span>, <span>Asus Zenfone 2 Laser ZE500KL</span>, <span>Asus Zenpad 7.0 Z370CG</span>, <span>Asus Zenfone 2E</span>, <span>Asus Pegasus 2 Plus</span>, <span>Asus Zenpad S 8.0 Z580CA</span>, <span>Asus Zenpad S 8.0 Z580C</span>, <span>Asus Zenpad 8.0 Z380KL</span>, <span>Asus Zenpad 8.0 Z380C</span>, <span>Asus Zenpad C 7.0 Z170MG</span>, <span>Asus Zenpad C 7.0</span>, <span>Asus Zenfone Selfie ZD551KL</span>, <span>Asus Zenfone 2 ZE500CL</span>, <span>Asus Zenfone 2 ZE550ML</span>, <span>Asus Zenfone 2 ZE551ML</span>, <span>Asus Fonepad 7 FE375CL</span>, <span>Asus Zenfone C ZC451CG</span>, <span>Asus Fonepad 7 FE171CG</span>, <span>Asus Zenfone Zoom ZX550</span>, <span>Asus Pegasus</span>, <span>Asus Zenfone 5 Lite A502CG (2014)</span>, <span>Asus Memo Pad 10 ME103K</span>, <span>Asus PadFone X mini</span>, <span>Asus Memo Pad 7 ME572CL</span>, <span>Asus Memo Pad 7 ME572C</span>, <span>Asus Zenfone 5 A500KL (2014)</span>, <span>Asus Zenfone 4 A450CG (2014)</span>, <span>Asus Memo Pad 8 ME581CL</span>, <span>Asus Memo Pad 8 ME181C</span>, <span>Asus Memo Pad 7 ME176C</span>, <span>Asus Fonepad 8 FE380CG</span>, <span>Asus Fonepad 7 FE375CXG</span>, <span>Asus Fonepad 7 FE375CG</span>, <span>Asus Transformer Pad TF303CL</span>, <span>Asus Transformer Pad TF103C</span>, <span>Asus Fonepad 7 (2014)</span>, <span>Asus PadFone X</span>, <span>Asus PadFone S</span>, <span>Asus PadFone Infinity Lite</span>, <span>Asus PadFone E</span>, <span>Asus Zenfone 6 A601CG</span>, <span>Asus Zenfone 6 A600CG</span>, <span>Asus Zenfone 5 A501CG (2015)</span>, <span>Asus Zenfone 5 A500CG (2014)</span>
-</p>   
-							</div>
-                    </div>
-                </div>
-            </li>
-            <li class="list-group-item">
-                <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
-                    <div class="col-xs-10 col-md-5">
-                        Microsoft
-                    </div>
-                    <div class="col-xs-2 col-md-1"><i class="fa fa-chevron-down pull-right"></i></div>
-                </div>
-                <div id="detail-2">
-                    <hr></hr>
-                    <div class="container">
-                        <div class="fluid-row">
-                            <div class="col-xs-12 col-md-6">
-                               <p>Microsoft Lumia 650</span>, <span>Microsoft Lumia 950 XL Dual SIM</span>, <span>Microsoft Lumia 950 XL</span>, <span>Microsoft Lumia 950 Dual SIM</span>, <span>Microsoft Lumia 950</span>, <span>Microsoft Lumia 550</span>, <span>Microsoft Lumia 540 Dual SIM</span>, <span>Microsoft Lumia 430 Dual SIM</span>, <span>Microsoft Lumia 640 XL LTE Dual SIM</span>, <span>Microsoft Lumia 640 XL LTE</span>, <span>Microsoft Lumia 640 XL Dual SIM</span>, <span>Microsoft Lumia 640 XL</span>, <span>Microsoft Lumia 640 LTE Dual SIM</span>, <span>Microsoft Lumia 640 LTE</span>, <span>Microsoft Lumia 640 Dual SIM</span>, <span>Microsoft Lumia 532 Dual SIM</span>, <span>Microsoft Lumia 532</span>, <span>Microsoft Lumia 435 Dual SIM</span>, <span>Microsoft Lumia 435</span>, <span>Microsoft Lumia 535 Dual SIM</span>, <span>Microsoft Lumia 535</span>, <span>Microsoft Surface 2</span>, <span>Microsoft Surface</span>, <span>Microsoft Kin TWOm</span>, <span>Microsoft Kin ONEm</span>, <span>Microsoft Kin Two</span>, <span>Microsoft Kin One</span>, <span>Microsoft Lumia 1030</span>, <span>Microsoft Lumia 1330</span>, <span>Microsoft Lumia 850</span>
-</p> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="list-group-item">
-                <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
-                    <div class="col-xs-10 col-md-5">
-                        Blackberry
-                    </div>
-                    <div class="col-xs-2 col-md-1"><i class="fa fa-chevron-down pull-right"></i></div>
-                </div>
-                <div id="detail-3">
-                    <hr></hr>
-                    <div class="container">
-                        <div class="fluid-row">
-                            <div class="col-xs-12 col-md-6">
-                                <p><span>Blackberry KEY2 LE</span>, <span>Blackberry Evolve X</span>, <span>Blackberry Evolve</span>, <span>Blackberry KEY2</span>, <span>Blackberry Motion</span>, <span>Blackberry Aurora</span>, <span>Blackberry Keyone</span>, <span>Blackberry DTEK60</span>, <span>Blackberry DTEK50</span>, <span>Blackberry Priv</span>, <span>Blackberry Leap</span>, <span>Blackberry Classic Non Camera</span>, <span>Blackberry Porsche Design P'9983</span>, <span>Blackberry Passport</span>, <span>Blackberry Classic</span>, <span>Blackberry Z3</span>, <span>Blackberry Porsche Design P'9982</span>, <span>Blackberry Z30</span>, <span>Blackberry 9720</span>, <span>Blackberry Q5</span>, <span>Blackberry Z10</span>, <span>Blackberry Q10</span>, <span>Blackberry 4G LTE Playbook</span>, <span>Blackberry Curve 9320</span>, <span>Blackberry Curve 9220</span>, <span>Blackberry Curve 9380</span>, <span>Blackberry Bold 9790</span>, <span>Blackberry Porsche Design P'9981</span>, <span>Blackberry Curve 9370</span>, <span>Blackberry Curve 9360</span>, <span>Blackberry Curve 9350</span>, <span>Blackberry Torch 9810</span>, <span>Blackberry Torch 9860</span>, <span>Blackberry Torch 9850</span>, <span>Blackberry Bold Touch 9900</span>, <span>Blackberry Bold Touch 9930</span>, <span>Blackberry 4G Playbook HSPA+</span>, <span>Blackberry Playbook Wimax</span>, <span>Blackberry Playbook</span>, <span>Blackberry Bold 9780</span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-			</li>
-        </ul>
 	</div>
+</div>
+
+</div>
 </div>
 	<footer>
 			<p class="text-primary" style="text-align:center">
