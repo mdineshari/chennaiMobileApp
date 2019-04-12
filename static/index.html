@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="styles/style.css" />
     <link type="text/css" rel="stylesheet" href="styles/imei.css" />
+    
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Staatliches" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -90,12 +91,14 @@
 
     <div class="container" id="home_container">
       <div class="row" id="my-row">
-        <div class="col-md-6 my-panel">
+        <div class="my-panel">
+			
+			<div class="col-md-8">
           <h1 class="h1_align">
             <span>Enter your IMEI number</span>
             <br />
           </h1>
-          <p>Dail *#06# from your mobile to know your IMEI</p>
+          
 
           <div id="imei_bar">
             <div id="controls">
@@ -106,31 +109,57 @@
             <div id="result"><span id="message"> </span>&nbsp;<a> </a></div>
           </div>
           <p>
-            Just type an IMEI code in the field above and click in "ok" button
+            Just type an IMEI code in the field<br/> above and click in "ok" button
             or type enter.
           </p>
           <div class="info">
-            <marquee
-              behaviour="scroll"
-              onmouseover="this.stop();"
-              onmouseout="this.start();"
-              width="70%"
-              direction="up"
-              scrollamount="2"
-              >**We are handle mobile services from <br />2016 model to till.<br />
+            <marquee behaviour="scroll" onmouseover="this.stop();" onmouseout="this.start();" width="70%" direction="up" scrollamount="2" >**We are handle mobile services from <br />2016 model to till.<br />
               **Company warranty will not accept here.
             </marquee>
           </div>
+          </div>
+		  <div class="col-md-4">
+			<div class="imei_info">
+				<h3>Know about your IMEI</h3>
+				<p>Every mobile has a unique 15 Numbers, called as  IMEI number.</p>
+				<p>You might need o find your IMEI number on back of your device or on the Sim Trey or Mobile Box backside.
+				<p>Dail *#06# on the dail pad you will get the IMEI number</p>
+				<p>On mobile, Setting -> About Phone -> System Info -> IMEI Number</p>
+			</div>
+		  </div>
         </div>
-        <div class="col-md-6 my-panel display">
-          <img
-            class="img-responsive"
-            src="images/banner.jpg"
-            alt="Banner images"
-          />
-        </div>
+        
       </div>
+	  
     </div>
+	<div class="sup_brand">
+		<div class="container">
+			<div class="row">
+				<h2 class="brand_head">Supported Brands</h2>
+			   <section class="customer-logos">
+				  <div class="slide"><img src="images/oppo.png"></div>
+				  <div class="slide"><img src="images/mi.jpeg"></div>
+				  <div class="slide"><img src="images/asus_logo.jpg"></div>
+				  <div class="slide"><img src="images/MSFT.png"></div>
+				  <div class="slide"><img src="images/blackberry_rim_logo.png"></div>
+				  <div class="slide"><img src="images/Meizu-new-logo-leak_1.jpg"></div>
+				  <div class="slide"><img src="images/vivo.jpg"></div>
+				  <div class="slide"><img src="images/sony.png"></div>
+				  <div class="slide"><img src="images/huawei.png"></div>
+				  <div class="slide"><img src="images/oneplus.png"></div>
+				  <div class="slide"><img src="images/realme.jpg"></div>
+				  <div class="slide"><img src="images/honor.jpeg"></div>
+				  <div class="slide"><img src="images/lenovo.jpg"></div>
+				  <div class="slide"><img src="images/nokia.jpg"></div>
+				  <div class="slide"><img src="images/lg.jpg"></div>
+				  <div class="slide"><img src="images/Logo-Apple-iPhone.jpg"></div>
+				  <div class="slide"><img src="images/samsung.jpg"></div>
+				  <div class="slide"><img src="images/motorola-batwing-logo.jpg"></div>			  
+			   </section>
+			</div>
+		</div>
+
+	</div>
     <div class="container">
       <div class="row" id="brand_container">
         <div class="col-md-1"></div>
@@ -181,7 +210,7 @@
 							</div>
 							
 							<label class="switch">
-							  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_1" data-problem="Charging Port Issue" data-cost="1500" id="1" />
+							  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_1" data-problem="Battery Issue" data-cost="1200" id="1" />
 							  <span class="slider round"></span>
 							</label>
 
@@ -193,11 +222,11 @@
 									<img src="../images/Charging_port_issue.png" alt="Park">
 								</a>
 								<div class="caption">
-									<h3>Battery Issue</h3>
-									<h3>Cost Rs. 1200</h3>
+									<h3>Charging Port Issue</h3>
+									<h3>Cost Rs. 1000</h3>
 								</div>
 								<label class="switch">
-								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_2" data-problem="Charging Port Issue" data-cost="1500" id="2" />
+								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_2" data-problem="Charging Port Issue" data-cost="1000" id="2" />
 								  <span class="slider round"></span>
 								</label>
 							</div>
@@ -208,11 +237,11 @@
 									<img src="../images/Display Broken.png" alt="Park">
 								</a>
 								<div class="caption">
-									<h3>Battery Issue</h3>
-									<h3>Cost Rs. 1200</h3>
+									<h3>Display Broken</h3>
+									<h3>Cost Rs. 1500</h3>
 								</div>
 								<label class="switch">
-								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_3" data-problem="Charging Port Issue" data-cost="1500" id="3" />
+								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_3" data-problem="Display Broken" data-cost="1500" id="3" />
 								  <span class="slider round"></span>
 								</label>
 							</div>
@@ -223,131 +252,131 @@
 									<img src="../images/Front Camera not working.png" alt="Park">
 								</a>
 								<div class="caption">
-									<h3>Battery Issue</h3>
-									<h3>Cost Rs. 1200</h3>
+									<h3>Camera not Working</h3>
+									<h3>Cost Rs. 1000</h3>
 								</div>
 								<label class="switch">
-								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_4" data-problem="Charging Port Issue" data-cost="1500" id="4" />
+								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_4" data-problem="Camera not Working" data-cost="1000" id="4" />
 								  <span class="slider round"></span>
 								</label>
 							</div>
 						</div>
 									<div class="col-sm-3 col-md-3">
 							<div class="thumbnail">
-								<a class="lightbox" href="../images/Charging_port_issue.png">
-									<img src="../images/Charging_port_issue.png" alt="Park">
+								<a class="lightbox" href="../images/Mike problem.png">
+									<img src="../images/Mike problem.png" alt="Park">
 								</a>
 								<div class="caption">
-									<h3>Battery Issue</h3>
-									<h3>Cost Rs. 1200</h3>
+									<h3>Mike problem</h3>
+									<h3>Cost Rs. 600</h3>
 								</div>
 								<label class="switch">
-								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_5" data-problem="Charging Port Issue" data-cost="1500" id="5" />
+								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_5" data-problem="Mike problem" data-cost="600" id="5" />
 								  <span class="slider round"></span>
 								</label>
 							</div>
 						</div>
 					<div class="col-sm-3 col-md-3">
 							<div class="thumbnail">
-								<a class="lightbox" href="../images/Charging_port_issue.png">
-									<img src="../images/Charging_port_issue.png" alt="Park">
+								<a class="lightbox" href="../images/Mobile network antena issue.png">
+									<img src="../images/Mobile network antena issue.png" alt="Park">
 								</a>
 								<div class="caption">
-									<h3>Battery Issue</h3>
-									<h3>Cost Rs. 1200</h3>
+									<h3>Network Antena Issue</h3>
+									<h3>Cost Rs. 800</h3>
 								</div>
 								<label class="switch">
-								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_6" data-problem="Charging Port Issue" data-cost="1500" id="2" />
+								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_6" data-problem="Mobile Network Antena Issue" data-cost="800" id="2" />
 								  <span class="slider round"></span>
 								</label>
 							</div>
 						</div>
 					<div class="col-sm-3 col-md-3">
 							<div class="thumbnail">
-								<a class="lightbox" href="../images/Charging_port_issue.png">
-									<img src="../images/Charging_port_issue.png" alt="Park">
+								<a class="lightbox" href="../images/Software error.png">
+									<img src="../images/Software error.png" alt="Park">
 								</a>
 								<div class="caption">
-									<h3>Battery Issue</h3>
+									<h3>Software Issue</h3>
 									<h3>Cost Rs. 1200</h3>
 								</div>
 								<label class="switch">
-								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_7" data-problem="Charging Port Issue" data-cost="1500" id="2" />
+								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_7" data-problem="Software Issue" data-cost="1200" id="2" />
 								  <span class="slider round"></span>
 								</label>
 							</div>
 						</div>
 									<div class="col-sm-3 col-md-3">
 							<div class="thumbnail">
-								<a class="lightbox" href="../images/Charging_port_issue.png">
-									<img src="../images/Charging_port_issue.png" alt="Park">
+								<a class="lightbox" href="../images/Volume Button.png">
+									<img src="../images/Volume Button.png" alt="Park">
 								</a>
 								<div class="caption">
-									<h3>Battery Issue</h3>
+									<h3>Volume Button</h3>
 									<h3>Cost Rs. 1200</h3>
 								</div>
 								<label class="switch">
-								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_8" data-problem="Charging Port Issue" data-cost="1500" id="2" />
+								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_8" data-problem="Volume Button" data-cost="1200" id="2" />
 								  <span class="slider round"></span>
 								</label>
 							</div>
 						</div>
 					<div class="col-sm-3 col-md-3">
 							<div class="thumbnail">
-								<a class="lightbox" href="../images/Charging_port_issue.png">
-									<img src="../images/Charging_port_issue.png" alt="Park">
+								<a class="lightbox" href="../images/Touch or Glass broken.png">
+									<img src="../images/Touch or Glass broken.png" alt="Park">
 								</a>
 								<div class="caption">
-									<h3>Battery Issue</h3>
-									<h3>Cost Rs. 1200</h3>
+									<h3>Touch or Glass broken</h3>
+									<h3>Cost Rs. 1500</h3>
 								</div>
 								<label class="switch">
-								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_9" data-problem="Charging Port Issue" data-cost="1500" id="2" />
+								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_9" data-problem="Touch or Glass broken" data-cost="1500" id="2" />
 								  <span class="slider round"></span>
 								</label>
 							</div>
 						</div>
 					<div class="col-sm-3 col-md-3">
 							<div class="thumbnail">
-								<a class="lightbox" href="../images/Charging_port_issue.png">
-									<img src="../images/Charging_port_issue.png" alt="Park">
+								<a class="lightbox" href="../images/Mute Button.png">
+									<img src="../images/Mute Button.png" alt="Park">
 								</a>
 								<div class="caption">
-									<h3>Battery Issue</h3>
-									<h3>Cost Rs. 1200</h3>
+									<h3>Mute Button</h3>
+									<h3>Cost Rs. 800</h3>
 								</div>
 								<label class="switch">
-								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_10" data-problem="Charging Port Issue" data-cost="1500" id="2" />
+								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_10" data-problem="Mute Button" data-cost="800" id="2" />
 								  <span class="slider round"></span>
 								</label>
 							</div>
 						</div>
 					<div class="col-sm-3 col-md-3">
 							<div class="thumbnail">
-								<a class="lightbox" href="../images/Charging_port_issue.png">
-									<img src="../images/Charging_port_issue.png" alt="Park">
+								<a class="lightbox" href="../images/Wifi error.png">
+									<img src="../images/Wifi error.png" alt="Park">
 								</a>
 								<div class="caption">
-									<h3>Battery Issue</h3>
+									<h3>Wifi error</h3>
 									<h3>Cost Rs. 1200</h3>
 								</div>
 								<label class="switch">
-								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_11" data-problem="Charging Port Issue" data-cost="1500" id="2" />
+								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_11" data-problem="Wifi error" data-cost="1200" id="2" />
 								  <span class="slider round"></span>
 								</label>
 							</div>
 						</div>
 					<div class="col-sm-3 col-md-3">
 							<div class="thumbnail">
-								<a class="lightbox" href="../images/Charging_port_issue.png">
-									<img src="../images/Charging_port_issue.png" alt="Park">
+								<a class="lightbox" href="../images/Loudspeaker error.png">
+									<img src="../images/Loudspeaker error.png" alt="Park">
 								</a>
 								<div class="caption">
-									<h3>Battery Issue</h3>
-									<h3>Cost Rs. 1200</h3>
+									<h3>Loudspeaker error</h3>
+									<h3>Cost Rs. 600</h3>
 								</div>
 								<label class="switch">
-								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_12" data-problem="Charging Port Issue" data-cost="1500" id="2" />
+								  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch_12" data-problem="Loudspeaker error" data-cost="600" id="2" />
 								  <span class="slider round"></span>
 								</label>
 							</div>
@@ -356,13 +385,13 @@
 			</div>
             <div class="row" id="btnStats">
               <div class="col-xs-6 text-left">
-                <button type="button" class="btn btn-success btn-block">
+                <button type="button" id="Button" class="btn btn-success btn-block">
                   Book a Service
                 </button>
               </div>
 
               <div class="col-xs-6 text-right">
-                <button type="button" class="btn btn-success btn-block">
+                <button type="button" id="Button_1" class="btn btn-success btn-block">
                   Book a Technician
                 </button>
               </div>
@@ -474,11 +503,36 @@
 		<p class="text-primary" style="text-align:center">
 				Online Repair Factory - Repair is the Opportunity</p>
 	</footer>
-    <script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
+    
     <script type="text/javascript" src="scripts/imei.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
     <script type="text/javascript" src="scripts/cart.js"></script>
     <script type="text/javascript" src="scripts/index.js"></script>
 	<script src="scripts/geo.js"></script>
-  </body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>  
+	<script>
+	$(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+	</script>
+</body>
 </html>

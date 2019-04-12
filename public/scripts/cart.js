@@ -18,9 +18,13 @@ function displayShoppingCart() {
   if (shoppingCart.length === 0) {
     $('#cart-msg').css('display', 'block');
     $('#my-cart-table').css('display', 'none');
+	$('#Button').prop('disabled', true);
+	$('#Button_1').prop('disabled', true);
   } else {
     $('#cart-msg').css('display', 'none');
     $('#my-cart-table').css('display', 'inline-table');
+	$('#Button').prop('disabled', false);
+	$('#Button_1').prop('disabled', false);
   }
 
   //iterate over array of objects
