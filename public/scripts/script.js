@@ -75,6 +75,7 @@ function validate(controlsId, textBoxId, resultId) {
         $('#counrty').text(mobileDetail.Country);
 
         $('#home_container').attr('style', 'display:none');
+        $('.sup_brand').attr('style', 'display:none');
         $('#brand_container').attr('style', 'display:block');
         $(window).scrollTop(0);
       });
@@ -100,7 +101,7 @@ $(document).ready(function() {
 });
 
 $('#btnStats').click(function() {
-  $(this).scrollTop(0);
   $('#problem_details').css('display', 'none');
   $('#user_details').css('display', 'block');
+  $(this).scrollTop(0);
 });

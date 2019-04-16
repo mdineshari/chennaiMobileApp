@@ -753,6 +753,12 @@ div.table-responsive table>tbody>tr>td:nth-child(3) {
 	}
 }
 @media (min-width: 767px) {
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+#imei_row{
+	background:#000;
+}
 
 .mx-width{
 	padding-left:100px;
@@ -776,6 +782,9 @@ div.table-responsive table>tbody>tr>td:nth-child(3) {
 }
 #my-row{
 	height:700px;
+}
+.navbar-toggle .icon-bar {
+    background-color: #fff;
 }
 #imei_row{
 	background:#000;
